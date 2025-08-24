@@ -34,7 +34,7 @@ export default function ServicesPage() {
   const lineRef = useRef<HTMLHeadingElement>(null)
   const textRef = useRef<HTMLHeadingElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
-  const buttonRef = useRef<HTMLHeadingElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   // Hero background images
   const heroImages = ["/services-slider/services-slider1.jpeg", "/services-slider/services-slider2.jpeg", "/services-slider/services-slider4.jpeg"]
