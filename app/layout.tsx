@@ -1,6 +1,5 @@
 'use client'
 // import type { Metadata } from "next";
-import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
 import ContactGroup from "@/Components/ContactGroup";
@@ -17,12 +16,7 @@ const robotoCondensed = Roboto_Condensed({
    
 });
 
-const ubuntu = Ubuntu({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'], // choose the weights you need
-  variable: '--font-ubuntu',
-  display: 'swap',
-})
+
 
 // export const metadata: Metadata = {
 //   title:{
