@@ -460,7 +460,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Secondary Featured Services */}
-            {services.slice(1, 3).map((service, index) => (
+            {services.slice(1, 3).map((service) => (
               <div
                 key={service.id}
                 className="bg-white rounded-3xl shadow-lg border border-slate-200/50 overflow-hidden hover:shadow-xl transition-all duration-300"

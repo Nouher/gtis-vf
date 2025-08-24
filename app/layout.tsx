@@ -1,5 +1,5 @@
 'use client'
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";

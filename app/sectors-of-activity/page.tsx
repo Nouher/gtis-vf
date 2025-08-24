@@ -352,9 +352,10 @@ export default function SectorsPage() {
               Leading Sectors
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Core Industry Expertise</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{`
               Discover the industries where we've built our reputation through exceptional project delivery and
               innovation
+            `}
             </p>
           </div>
 

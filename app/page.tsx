@@ -1,12 +1,12 @@
 'use client'
 import Image from "next/image";
 import { ArrowRight, Cable, HandHelping, PencilRuler, Shapes, Workflow, Wrench } from "lucide-react";
-import { Typewriter } from "react-simple-typewriter";
+// import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
 import PowerfulStats from "@/Components/PowerfulStats";
 import IndustrialShowcase from "@/Components/IndustrialShowcase";
 import { Button } from "@/Components/ui/button";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { useLanguage } from "./context/language-context";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
