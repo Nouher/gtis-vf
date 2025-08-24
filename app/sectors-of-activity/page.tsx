@@ -412,7 +412,7 @@ export default function SectorsPage() {
             </div>
 
             {/* Secondary Featured Sectors */}
-            {sectors.slice(1, 3).map((sector, index) => (
+            {sectors.slice(1, 3).map((sector) => (
               <div
                 key={sector.id}
                 className="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300"
