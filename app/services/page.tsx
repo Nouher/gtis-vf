@@ -30,7 +30,7 @@ export default function ServicesPage() {
   const [isPlaying, setIsPlaying] = useState(true)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set())
-  const cardRefs = useRef<(HTMLHeadingElement)[]>([])
+  const cardRefs = useRef<(HTMLDivElement)[]>([])
   const lineRef = useRef<HTMLHeadingElement>(null)
   const textRef = useRef<HTMLHeadingElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
