@@ -535,7 +535,9 @@ export default function ServicesPage() {
             {filteredServices.map((service, index) => (
               <div
                 key={service.id}
-                ref={(el) => (cardRefs.current[index] = el)}
+                ref={(el) => {
+                      cardRefs.current[index] = el
+                    }}
                 data-card-index={index}
                 className={`bg-white rounded-3xl shadow-lg border border-slate-200/50 overflow-hidden hover:shadow-xl transition-all duration-700 hover:-translate-y-2 ${
                   visibleCards.has(index) ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-95"
