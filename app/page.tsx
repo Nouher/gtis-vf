@@ -14,9 +14,9 @@ import { useEffect, useRef } from "react";
 export default function Home() {
 
   const { t } = useLanguage();
-  const textRef = useRef<HTMLElement>(null);
-  const descRef = useRef<HTMLElement>(null);
-  const buttonsRef = useRef<HTMLElement>(null);
+  const textRef = useRef<HTMLHeadingElement>(null);
+  const descRef = useRef<HTMLHeadingElement>(null);
+  const buttonsRef = useRef<HTMLHeadingElement>(null);
 
 
   useEffect(() => {

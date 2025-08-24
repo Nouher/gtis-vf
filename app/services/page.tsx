@@ -30,11 +30,11 @@ export default function ServicesPage() {
   const [isPlaying, setIsPlaying] = useState(true)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set())
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
-  const lineRef = useRef<HTMLDivElement | null>(null)
-  const textRef = useRef<HTMLDivElement | null>(null)
-  const titleRef = useRef<HTMLHeadingElement | null>(null)
-  const buttonRef = useRef<HTMLButtonElement | null>(null)
+  const cardRefs = useRef<(HTMLHeadingElement)[]>([])
+  const lineRef = useRef<HTMLHeadingElement>(null)
+  const textRef = useRef<HTMLHeadingElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null)
+  const buttonRef = useRef<HTMLHeadingElement>(null)
 
   // Hero background images
   const heroImages = ["/services-slider/services-slider1.jpeg", "/services-slider/services-slider2.jpeg", "/services-slider/services-slider4.jpeg"]
