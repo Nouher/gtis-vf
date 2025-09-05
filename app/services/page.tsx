@@ -377,7 +377,7 @@ const animateNavLine = (index: number) => {
           {slides.map((slide, idx) => (
             <button
               key={idx}
-              ref={(el) => navRefs.current[idx] = el}
+              ref={(el) => { navRefs.current[idx] = el; }}
               onClick={() => setCurrent(idx)}
               className="relative text-xs sm:text-base lg:text-lg uppercase tracking-wider"
             >
