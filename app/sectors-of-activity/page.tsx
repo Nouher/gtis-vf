@@ -262,11 +262,11 @@ export default function SectorsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Background Image - Light Blue Gray Theme */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative pt-32 overflow-hidden h-screen flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/industrial-landscape.png"
+            src="/bg-projects.jpeg"
             alt="Industrial Sectors Background"
             fill
             className="object-cover"
@@ -282,28 +282,28 @@ export default function SectorsPage() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-6xl mx-auto">
             <div
               className={`transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
-              <div className="inline-flex items-center px-4 py-2 bg-slate-500/20 backdrop-blur-sm border border-slate-400/30 text-slate-100 rounded-full text-sm font-medium mb-6">
-                <Globe className="h-4 w-4 mr-2" />
+              <div className="inline-flex items-center px-4 py-2 bg-slate-500/20 backdrop-blur-sm border border-slate-400/30 text-slate-100 rounded-full text-md font-medium mb-6">
+                <Globe className="h-5 w-5 mr-2" />
                 Sectors of Activity
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-black text-white mb-6">
+              <h1 className="text-4xl md:text-8xl font-black text-white mb-6 uppercase">
                 Industrial{" "}
-                <span className="bg-gradient-to-r from-slate-300 to-blue-gray-300 bg-clip-text text-transparent">
+                <span className="">
                   Engineering Solutions
                 </span>
               </h1>
-              <p className="text-xl text-slate-100 mb-8 leading-relaxed">
+              <p className="text-2xl text-slate-100 mb-8 leading-relaxed ">
                 GTIS operates across multiple industrial sectors, offering tailor-made engineering and maintenance
                 solutions to support infrastructure development, process automation, and performance optimization.
               </p>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="text-center p-4 bg-slate-500/20 backdrop-blur-sm rounded-2xl border border-slate-400/30 hover:bg-slate-500/30 transition-all duration-300">
                   <div className="text-3xl font-bold text-white mb-1">{stats.totalProjects}+</div>
                   <div className="text-slate-200 text-sm">Projects Delivered</div>
@@ -320,22 +320,22 @@ export default function SectorsPage() {
                   <div className="text-3xl font-bold text-white mb-1">{stats.countries}</div>
                   <div className="text-slate-200 text-sm">Countries Served</div>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center ">
                 <Link href="/contact">
-                  <Button className="bg-slate-600 hover:bg-slate-700 text-white px-8 py-4 text-lg rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <Phone className="mr-2 h-5 w-5" />
+                  <Button className="bg-[#3171B3] hover:bg-[#285f95] text-white px-10 py-7 text-2xl rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <Phone className="mr-2 h-10 w-10" />
                     Discuss Your Project
                   </Button>
                 </Link>
                 <Button
                   variant="outline"
-                  className="border-2 border-slate-300/50 text-slate-100 hover:bg-slate-500/20 px-8 py-4 text-lg rounded-2xl transition-all duration-300 bg-transparent"
+                  className="border-2 border-slate-300 text-slate-100 hover:bg-white/50 hover:text-[#3171B3] px-10 py-6.5 text-2xl rounded-2xl transition-all duration-300 bg-transparent"
                   onClick={() => document.getElementById("sectors-grid")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Explore Sectors
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-10 w-10" />
                 </Button>
               </div>
             </div>
@@ -781,35 +781,34 @@ export default function SectorsPage() {
       <section className="relative py-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image src="/industrial-facility-sectors.png" alt="Contact Background" fill className="object-cover" />
+          <Image src="/bg-projects.jpeg" alt="Contact Background" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-slate-700/80 to-blue-gray-700/70" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Industry Operations?
+              Ready to work together?
             </h2>
             <p className="text-xl text-slate-100 mb-12">
-              Connect with our industry specialists to discuss how we can optimize your sector-specific challenges with
-              proven solutions
+              Whether you have a project in mind and you’re looking for a reliable construction partner or you’re looking to take the next step in your career, we want to hear from you!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/contact">
-                <Button className="bg-slate-600 hover:bg-slate-700 text-white px-10 py-6 text-lg rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Discuss Your Sector
+                <Button className="uppercase bg-[#3171B3] hover:bg-[#285f95] text-white px-10 py-6 text-lg rounded-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  <Phone  className="mr-2 h-7 w-7" />
+                  Build a project with us
                 </Button>
               </Link>
 
               <Link href="mailto:contact@gtis.com">
                 <Button
                   variant="outline"
-                  className="border-2 border-slate-300/50 text-slate-100 hover:bg-slate-500/20 px-10 py-6 text-lg rounded-2xl transition-all duration-300 bg-transparent"
+                  className="uppercase border-2 border-slate-300/50 text-slate-100 hover:bg-[#3171B3]/20 hover:text-white px-10 py-6 text-lg rounded-md hover:scale-105 transition-all duration-300 bg-transparent"
                 >
                   <Mail className="mr-2 h-5 w-5" />
-                  Industry Consultation
+                  Build a career with us
                 </Button>
               </Link>
             </div>

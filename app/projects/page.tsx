@@ -344,9 +344,9 @@ export default function ProjectsPage() {
   const selectedCategoryData = categories.find((cat) => cat.id === selectedCategory)
 
   return (
-    <div className="min-h-screen bg-white mt-0 lg:mt-36">
+    <div className="min-h-screen bg-white mt-0 lg:">
       {/* Hero Section with Background Image */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-end pb-16 justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -363,18 +363,18 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             {/* Badge */}
-            <div
-              className={`inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-sm font-medium mb-8 transform transition-all duration-700 ${
+            {/* <div
+              className={`inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-sm font-medium mb-4 transform transition-all duration-700 ${
                 isLoaded ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
               }`}
             >
               <Award className="w-4 h-4 mr-2 text-yellow-400" />
               <span>Completed Projects Portfolio</span>
-            </div>
+            </div> */}
 
             {/* Title */}
             <h1
-              className={`text-5xl md:text-7xl font-black leading-tight mb-6 transform transition-all duration-700 delay-200 ${
+              className={`text-5xl md:text-8xl uppercase font-black leading-tight mb-6 transform transition-all duration-700 delay-200 ${
                 isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >

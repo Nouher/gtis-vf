@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { ArrowRight, Cable, HandHelping, PencilRuler, Shapes, Workflow, Wrench } from "lucide-react";
+import { ArrowRight, Award, Cable, Calendar, HandHelping, Mail, PencilRuler, Phone, Shapes, Shield, Workflow, Wrench } from "lucide-react";
 // import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
 import PowerfulStats from "@/Components/PowerfulStats";
@@ -10,6 +10,7 @@ import { Button } from "@/Components/ui/button";
 import { useLanguage } from "./context/language-context";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
+import ProjectsSlider from "@/Components/ProjectsSlider";
 
 export default function Home() {
 
@@ -96,10 +97,11 @@ export default function Home() {
         <div className="h-1 bg-sky-500 w-full"/> 
 
         <PowerfulStats/>
-        <IndustrialShowcase/>
+        {/* <IndustrialShowcase/> */}
+        <ProjectsSlider/>
  
         {/* Services Section */}
-        <section id="services" className="py-24 bg-gray-50">
+        {/* <section id="services" className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
@@ -155,7 +157,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* News Section */}
         <section id="news" className="py-24 bg-white">
@@ -217,7 +219,61 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="w-full h-[720px] relative opacit ">
+
+        {/* CTA Section */}
+
+        <section className="relative py-24 overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <Image src="/map.svg" alt="Contact Background" fill className="object-cover object-center" />
+                  <div className="absolute inset-0 bg-blue-950/70" />
+                </div>
+        
+                <div className="container mx-auto px-4 relative z-10">
+                  <div className="text-center max-w-4xl mx-auto">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Start Your Industrial Project?</h2>
+                    <p className="text-xl text-white/90 mb-12">
+                      Contact our experts to discuss your requirements and get a customized solution for your industrial needs
+                    </p>
+        
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                      <Link href="/contact">
+                        <Button className="bg-white text-slate-900 hover:bg-slate-100 px-10 py-6 text-lg rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300">
+                          <Phone className="mr-2 h-5 w-5" />
+                          Get Free Quote
+                        </Button>
+                      </Link>
+        
+                      <Link href="mailto:contact@gtis.com">
+                        <Button
+                          variant="outline"
+                          className="border-2 border-white/30 text-white hover:bg-white/10 px-10 py-6 text-lg rounded-2xl transition-all duration-300 bg-transparent"
+                        >
+                          <Mail className="mr-2 h-5 w-5" />
+                          Contact Experts
+                        </Button>
+                      </Link>
+                    </div>
+        
+                    <div className="mt-12 flex items-center justify-center space-x-8 text-white/80">
+                      <div className="flex items-center">
+                        <Calendar className="h-5 w-5 mr-2" />
+                        <span>24h Response</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Award className="h-5 w-5 mr-2" />
+                        <span>Free Consultation</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Shield className="h-5 w-5 mr-2" />
+                        <span>Quality Guaranteed</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+        {/* <div className="w-full h-[720px] relative opacit ">
           <div className="absolute  top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-transparent via-blue-950/20 to-blue-950/100"></div>
           <div className="absolute  top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-white via-white/10 to-white/70"></div>
           
@@ -227,7 +283,7 @@ export default function Home() {
               fill
               className="object-cover object-center"
               />
-          </div>
+          </div> */}
 
 
       </div>

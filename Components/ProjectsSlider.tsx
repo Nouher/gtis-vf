@@ -1,14 +1,12 @@
-
-// import { useState } from "react"
-import Image from "next/image"
-import { Button } from "@/Components/ui/button"
-import { ArrowRight,  Factory } from "lucide-react"
+import { ArrowRight } from "lucide-react";
+import React, { Component } from "react";
+import Slider from "react-slick";
+import { Button } from "./ui/button";
+import Image from "next/image";
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
-export default function IndustrialShowcase() {
- 
-  // const [hoveredItem, setHoveredItem] = useState<number | null>(null)
+function ProjectsSlider() {
 
   const router = useRouter()
 
@@ -119,14 +117,19 @@ Built with precision and engineered for strength, our steel structures ensure du
     },
   ]
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true
+  };
   return (
-    <section className="py-16  relative overflow-hidden">
-      
-     
+    <div className="slider-container px-28">
 
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
+         <div className="text-center mb-16">
           {/* <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-[#0E6FB7] rounded-full text-sm font-medium mb-4">
             <Factory className="h-4 w-4 mr-2" />
             Industrial Excellence
@@ -139,103 +142,83 @@ Built with precision and engineered for strength, our steel structures ensure du
             cutting-edge technology and unmatched expertise.
           </p>
         </div>
-            
-
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-24 gap-6 mb-16">
-          {industrialServices.map((service) => (
-            <div
-              onClick={()=>handleNavigate(service.title)}
-              key={service.id}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-              // onMouseEnter={() => setHoveredItem(service.id)}
-              // onMouseLeave={() => setHoveredItem(null)}
-            >
-              {/* Image */}
-              <div className="relative h-64 overflow-hidden">
-                <Image
-                  src={service.image || "/placeholder.svg"}
-                  alt={service.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-
-                {/* Gradient Overlay */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-40 group-hover:opacity-60 transition-opacity duration-300 `}
-                ></div>
-
-              
-
-                {/* Plus Icon */}
-                {/* <div className="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-gray-900 transition-all duration-300">
-                  <Plus className="h-6 w-6" />
-                </div> */}
-
-                {/* Stats Badge */}
-                {/* <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                  {service.stats}
-                </div> */}
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="mb-2">
-                  <span className="text-sm text-gray-500 font-medium">{service.subtitle}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">{service.description}</p>
-
-                {/* Action Button */}
-                {/* <Link href={`/projects/${service.title.toLowerCase().replace(/\s+/g, "-")}`}> */}
-             
-                <Button
-                  onClick={()=>handleNavigate(service.title)}
-                  variant="ghost"
-                  className="w-full justify-between group-hover:bg-blue-50 group-hover:text-blue-600 transition-all duration-300"
-                  
-                  >
-                      Learn More
-                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button> 
-
-                {/* <Link
-                  href={`/projects/${slugify(service.title)}`}
-                  
-                >
-
-                  Learn More
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link> */}
-              </div>
-
-              {/* Hover Effect Border */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-2xl transition-all duration-300"></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Button asChild className="bg-gradient-to-r from-[#1c83d1] to-[#0E6FB7] hover:from-[#0f568d] hover:to-[#075591] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-            <Link href="/services">
-              Explore All Services
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="border-2 border-[#0E6FB7] text-[#0E6FB7] hover:bg-[#0E6FB7] hover:text-white px-8 py-6 text-lg rounded-full transition-all duration-300 bg-transparent"
-            >
-              Request Consultation
-            </Button>
-          </div>
-        </div>
-      </div>
-
-    </section>
-  )
+        
+      <Slider {...settings} className="" >
+        {industrialServices.map((service) => (
+                   <div
+                     onClick={()=>handleNavigate(service.title)}
+                     key={service.id}
+                     className="h-[520px] my-4 group relative overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                     // onMouseEnter={() => setHoveredItem(service.id)}
+                     // onMouseLeave={() => setHoveredItem(null)}
+                   >
+                     {/* Image */}
+                     <div className="relative h-64 overflow-hidden">
+                       <Image
+                         src={service.image || "/placeholder.svg"}
+                         alt={service.title}
+                         fill
+                         className="object-cover transition-transform duration-700 group-hover:scale-110"
+                       />
+       
+                       {/* Gradient Overlay */}
+                       <div
+                         className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-40 group-hover:opacity-60 transition-opacity duration-300 `}
+                       ></div>
+       
+                     
+       
+                       {/* Plus Icon */}
+                       {/* <div className="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-gray-900 transition-all duration-300">
+                         <Plus className="h-6 w-6" />
+                       </div> */}
+       
+                       {/* Stats Badge */}
+                       {/* <div className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                         {service.stats}
+                       </div> */}
+                     </div>
+       
+                     {/* Content */}
+                     <div className="p-6">
+                       <div className="mb-2">
+                         <span className="text-sm text-gray-500 font-medium">{service.subtitle}</span>
+                       </div>
+                       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                         {service.title}
+                       </h3>
+                       <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">{service.description}</p>
+       
+                       {/* Action Button */}
+                       {/* <Link href={`/projects/${service.title.toLowerCase().replace(/\s+/g, "-")}`}> */}
+                    
+                       <Button
+                         onClick={()=>handleNavigate(service.title)}
+                         variant="ghost"
+                         className="w-full justify-between group-hover:bg-blue-50 group-hover:text-blue-600 transition-all duration-300"
+                         
+                         >
+                             Learn More
+                             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                       </Button> 
+       
+                       {/* <Link
+                         href={`/projects/${slugify(service.title)}`}
+                         
+                       >
+       
+                         Learn More
+                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                       </Link> */}
+                     </div>
+       
+                     {/* Hover Effect Border */}
+                     <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-2xl transition-all duration-300"></div>
+                   </div>
+                 ))}
+      </Slider>
+    </div>
+  );
 }
+
+export default ProjectsSlider;

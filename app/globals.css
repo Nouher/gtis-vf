@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -154,3 +155,12 @@
   .group:not(:hover) .underline-snake {
     transform: scaleX(0); /* disappear left → right */
   }
+
+
+  .slick-slide {
+  padding: 0 10px; /* 10px space on left and right of each slide */
+}
+
+.slick-list {
+  margin: 0 -10px; /* counteract padding so slider aligns */
+}

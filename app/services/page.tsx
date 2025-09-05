@@ -18,83 +18,91 @@ import {
   Award,
   Users,
   Calendar,
-  Play,
-  Pause,
 } from "lucide-react"
 import { Button } from "@/Components/ui/button"
 import { gsap } from "gsap"
 
+const slides = [
+  {
+    miniTitle: "INDUSTRIAL EXPERTISEhh",
+    title: "Complete Industrial Solutions Delivering Efficiency & Innovation",
+    buttonText: "EXPLORE OUR SERVICES",
+    image: "/services-slider/services-slider1.jpeg",
+  },
+  {
+    miniTitle: "TECHNOLOGY FOCUS",
+    title: "Advanced Automation for Modern Industries",
+    buttonText: "LEARN MORE",
+    image: "/services-slider/services-slider2.jpeg",
+  },
+  {
+    miniTitle: "GLOBAL REACH",
+    title: "Worldwide Solutions Tailored for Your Needs",
+    buttonText: "GET STARTED",
+    image: "/services-slider/services-slider3.jpeg",
+  },
+];
+
+
 export default function ServicesPage() {
-  const [isLoaded, setIsLoaded] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("all")
-  const [isPlaying, setIsPlaying] = useState(true)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set())
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
-  const lineRef = useRef<HTMLDivElement | null>(null)
-  const textRef = useRef<HTMLDivElement | null>(null)
-  const titleRef = useRef<HTMLHeadingElement | null>(null)
-  const buttonRef = useRef<HTMLButtonElement | null>(null)
+    const [current, setCurrent] = useState(0);
+  const heroRef = useRef(null);
+  const miniRef = useRef(null);
+  const miniLineRef = useRef(null);
+  const titleRef = useRef(null);
+  const btnRef = useRef(null);
+  const navRefs = useRef([]);
 
-  // Hero background images
-  const heroImages = ["/services-slider/services-slider1.jpeg", "/services-slider/services-slider2.jpeg", "/services-slider/services-slider4.jpeg"]
 
-  useEffect(() => {
-    setIsLoaded(true)
-    gsap.fromTo(lineRef.current, {
-       width: 0 
-      },
-       { 
-        width: "240px", 
-        duration: 1.5, 
-        ease: "power2.out",
-        delay: 0.5,
-      })
-      gsap.fromTo(textRef.current, {
-        opacity: 0,
-        x: -20,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1.5,
-        ease: "power2.out",
-        delay: 2,
-      })
-      gsap.fromTo(titleRef.current, {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power2.out",
-        delay: 2.5,
-      })
-      gsap.fromTo(buttonRef.current, {
-        opacity: 0,
-        x: -100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: .5,
-        ease: "power1.out",
-        delay: 3,
-      })
-  }, [])
+  const animateNavLine = (index) => {
+      const line = navRefs.current[index].querySelector('.nav-line');
+      gsap.fromTo(line, { scaleX: 0 }, {
+        scaleX: 1,
+        duration: 5,
+        transformOrigin: 'left',
+        onComplete: () => setCurrent((prev) => (prev + 1) % slides.length)
+      });
+      navRefs.current.forEach((nav, i) => {
+        if(i !== index){
+          gsap.to(nav.querySelector('.nav-line'), { scaleX: 0, duration: 0.3, transformOrigin: 'left' });
+        }
+      });
+    };
+  
+    useEffect(() => {
+      animateNavLine(current);
+    }, [current]);
+  
+    useEffect(() => {
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline();
+  
+        gsap.set(miniLineRef.current, { display: 'inline-block', width: 0, height: '2px', backgroundColor: '#fff', marginRight: '8px', verticalAlign: 'middle' });
+        tl.to(miniLineRef.current, { width: miniRef.current.getBoundingClientRect().width, duration: 0.6, ease: 'power2.out' });
+  
+        tl.from(miniRef.current, { opacity: 0, duration: 0.6 }, "-=0.3");
+        tl.from(titleRef.current, { y: 40, opacity: 0, duration: 0.8 }, "-=0.3");
+        tl.from(btnRef.current, {
+          opacity: 0,
+          duration: 0.6,
+          onStart: () => {
+            gsap.fromTo(
+              btnRef.current.querySelector('.btn-line'),
+              { scaleX: 0, transformOrigin: 'left', backgroundColor: '#fff' },
+              { scaleX: 1, duration: 0.5 }
+            );
+          },
+        }, "-=0.4");
+      }, heroRef);
+      return () => ctx.revert();
+    }, [current]);
+  
 
-  // Auto-change background images
-  useEffect(() => {
-    if (!isPlaying) return
 
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1))
-    }, 5000) // Change every 5 seconds
 
-    return () => clearInterval(interval)
-  }, [isPlaying, heroImages.length])
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -292,108 +300,40 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - PCL Style with Blue Accent and Auto-changing Background */}
-      <section className="relative h-screen overflow-hidden">
-          <div className="absolute bottom-0 right-0 h-auto flex flex-col items-center gap-6 p-8 rounded-lg z-50">
-                <a href=""><Image src="/social-media-icons/icon-linkedin-white.svg" alt="LinkedIn" width={24} height={24} className=""/></a>
-                <a href=""><Image src="/social-media-icons/icon-facebook-white.svg" alt="Facebook" width={24} height={24} className=""/></a>
-                <a href=""><Image src="/social-media-icons/icon-instagram-white.svg" alt="Instagram" width={24} height={24} className=""/></a>
-                <a href=""><Image src="/social-media-icons/icon-twitter-white.svg" alt="Twitter" width={24} height={24} className=""/></a>
-                <a href=""><Image src="/social-media-icons/icon-youtube-white.svg" alt="Youtube" width={24} height={24} className=""/></a>
-    
-              </div>
-        {/* Background Images with Smooth Transitions */}
-        <div className="absolute inset-0">
-          {heroImages.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentImageIndex ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <Image
-                src={image || "/placeholder.svg"}
-                alt={`Industrial Background ${index + 1}`}
-                fill
-                className="object-cover"
-                priority={index === 0}
-              />
-            </div>
-          ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/60 to-slate-700/40" />
+      {/* Hero Section */}
+              <section
+        ref={heroRef}
+        className="relative w-full h-screen flex flex-col justify-center px-6 sm:px-12 md:px-32 lg:px-48 bg-cover bg-center text-white"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, #1128479d, #1128479d), url(${slides[current].image})`
+        }}
+      >
+        <div className="relative max-w-2xl">
+          <span ref={miniLineRef}></span>
+          <span ref={miniRef} className="text-sm sm:text-base lg:text-lg uppercase tracking-widest text-white">
+            {slides[current].miniTitle}
+          </span>
+          <h1 ref={titleRef} className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 leading-tight mt-4">
+            {slides[current].title}
+          </h1>
+          <button ref={btnRef} className="relative group inline-flex items-center font-semibold text-white mt-4">
+            {slides[current].buttonText}
+            <span className="btn-line block h-[2px] w-16 bg-white ml-4 origin-left transform scale-x-0"></span>
+          </button>
         </div>
 
-        {/* Image Indicators */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-          {heroImages.map((_, index) => (
+        <div className="absolute bottom-8 left-6 sm:left-12 md:left-32 flex space-x-6 sm:space-x-8 md:space-x-12">
+          {slides.map((slide, idx) => (
             <button
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentImageIndex ? "bg-blue-500 w-8" : "bg-white/50 hover:bg-white/70"
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Geometric Accent Elements */}
-        <div className="absolute top-0 right-0 w-96 h-96">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 transform rotate-45 translate-x-32 -translate-y-32" />
-          <div className="absolute top-32 right-32 w-48 h-48 bg-blue-600/20 transform rotate-45" />
-        </div>
-
-        {/* Main Content */}
-        <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center mt-20">
-          <div className="max-w-6xl">
-            <div
-              className={`transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              key={idx}
+              ref={(el) => navRefs.current[idx] = el}
+              onClick={() => setCurrent(idx)}
+              className="relative text-xs sm:text-base lg:text-lg uppercase tracking-wider"
             >
-              <div className="flex justify-start items-center ">
-
-                {/* Blue Accent Line */}
-                <div ref={lineRef} className="w-0 h-1 bg-blue-400 mb-6 mr-3" />
-
-                {/* Subtitle */}
-                <div ref={textRef} className="text-blue-400 text-2xl font-semibold tracking-wider uppercase mb-6">
-                  INDUSTRIAL EXPERTISE
-                </div>
-              </div>
-
-              {/* Main Heading */}
-              <h1 ref={titleRef} className="text-5xl md:text-8xl font-bold text-white mb-10 leading-tight ">
-                Complete Industrial
-                <br />
-                Solutions Deliver
-                <br />
-                <span className="text-blue-400">Exceptional Value</span>
-              </h1>
-
-              {/* CTA Button */}
-              <div className="mb-16">
-                <Link href="#services-grid">
-                  <Button
-                    ref={buttonRef}
-                    variant="outline"
-                    className=" rounded-xl border-2 border-white text-white hover:bg-white hover:text-slate-900 px-16 py-6 text-2xl bg-transparent transition-all duration-300 "
-                  >
-                    EXPLORE OUR SERVICES
-                    <ArrowRight className="ml-2 h-7 w-7 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          
-          </div>
-
-          {/* Play/Pause Button */}
-          <div className="absolute bottom-8 right-8">
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="w-12 h-12 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
-            >
-              {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5 ml-0.5" />}
+              {slide.miniTitle}
+              <span className="nav-line absolute -top-2 left-0 w-full h-[2px] bg-white origin-left transform scale-x-0"></span>
             </button>
-          </div>
+          ))}
         </div>
       </section>
 

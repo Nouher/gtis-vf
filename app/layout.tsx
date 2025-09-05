@@ -1,13 +1,12 @@
-'use client'
-// import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
 import ContactGroup from "@/Components/ContactGroup";
 import Footer from "@/Components/Footer";
 import { Roboto_Condensed } from "next/font/google";
 import { LanguageProvider } from "./context/language-context"
-import { useEffect, useState } from "react";
-import PreLoading from "@/Components/PreLoading";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 
 const robotoCondensed = Roboto_Condensed({
@@ -18,13 +17,13 @@ const robotoCondensed = Roboto_Condensed({
 
 
 
-// export const metadata: Metadata = {
-//   title:{
-//     default:"GTIS – Global Technical Industry Services",
-//     template:"%s | GTIS – Global Technical Industry Services",
-//   },
-//   description: "Conception et réalisation complètes d'usines agroalimentaires pour répondre à vos besoins industriels. Innovation, Qualité, Efficacité. Contactez nous ...",
-// };
+export const metadata: Metadata = {
+  title:{
+    default:"GTIS – Global Technical Industry Services",
+    template:"%s | GTIS – Global Technical Industry Services",
+  },
+  description: "Conception et réalisation complètes d'usines agroalimentaires pour répondre à vos besoins industriels. Innovation, Qualité, Efficacité. Contactez nous ...",
+};
 
 
 export default function RootLayout({
@@ -33,13 +32,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const [loading, setLoading] = useState(true);
-  
-  useEffect(() => {
-    // Simulate a short loading delay (you can remove or adjust)
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
   
   return (
     <html lang="en">
@@ -47,22 +39,13 @@ export default function RootLayout({
         className={`${robotoCondensed.className} antialiased`}
       >
         <LanguageProvider>
-          {
-            loading ? (
-              <PreLoading />
-            ):(
-              <>
-              
-                <Navbar/>
-                
-                <ContactGroup/>
-                {/* <div className="mt-[132px]"> */}
-                {children}
-                {/* </div> */}
-                <Footer/>
-              </>
-            )
-          }
+          <Navbar/>
+          
+          <ContactGroup/>
+          {/* <div className="mt-[132px]"> */}
+          {children}
+          {/* </div> */}
+          <Footer/>
         </LanguageProvider>
       </body>
     </html>

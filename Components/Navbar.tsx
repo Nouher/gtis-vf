@@ -60,7 +60,7 @@ const [scrollPos, setScrollPos] = useState(0);
 
     return (
       <div className={`bg-transparent w-full fixed z-50 h-40 ${visible ? "translate-y-0" : "-translate-y-full"}
-        ${bgWhite ? "bg-white/95 border-b-1" : "bg-transparent"}`}>
+        ${bgWhite ? "bg-white border-b-1" : "bg-transparent"}`}>
           <div className=''>
             <div className="bg-transparent  px-20 w-full items-center justify-between hidden lg:flex">
               <div className=" flex flex-row-reverse items-center justify-between w-full h-12">

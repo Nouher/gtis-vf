@@ -11,7 +11,7 @@ useEffect(() => {
         opacity: 1
     }, 
     {
-        y: 0,
+        y: -1000,
         ease: "power1.inOut",
         yoyo: true,
         opacity: 0,
@@ -21,7 +21,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className='move h-screen w-full bg-gray-700/95 z-[300] flex justify-center items-center fixed top-0 left-0'>
+    <div className='move h-screen w-full bg-[#3171B3] z-[300] flex justify-center items-center fixed top-0 left-0'>
          <svg className='h-50 w-50 animate-spin' fill='#fff' version="1.0" xmlns="http://www.w3.org/2000/svg" width="1438px" height="394px" viewBox="0 0 1438 394" preserveAspectRatio="xMidYMid meet">
             <g transform="matrix(1, 0, 0, 1, 529.119202, 0.463944)">
                 <path className='' d="M186 391 c-30.7 -5.6 -56 -18.9 -78.1 -40.9 -20.7 -20.8 -33.4 -44.3 -39.6 -73.1 -2.6 -12.1 -2.6 -43.9 0 -56 6.1 -28.4 18.8 -52.7 38.6 -73.2 25.7 -26.8 57.6 -42.2 95.1 -45.9 16.3 -1.6 37.5 0.4 53.2 5.1 l6.3 1.8 -6 0.1 c-3.3 0.1 -10.1 0.8 -15 1.6 -57.6 9.3 -103.1 53.7 -112.9 110.1 -2 11.5 -2.1 33.5 -0.1 45 5.8 33.3 24.2 63.1 51.6 83.4 10.1 7.5 29.3 17.1 41.1 20.4 19.2 5.5 44.3 7 61.2 3.6 2.7 -0.6 5.1 -0.8 5.4 -0.6 0.7 0.7 -16.5 9.1 -24.8 12.1 -15.9 5.7 -27 7.6 -47 8.1 -15.2 0.3 -20.4 0 -29 -1.6z" />
