@@ -57,20 +57,37 @@ export default function ServicesPage() {
   const navRefs = useRef<Array<HTMLElement | null>>([]);
 
 
-  const animateNavLine = (index:number) => {
-      const line = navRefs.current[index].querySelector<HTMLElement>('.nav-line');
-      gsap.fromTo(line, { scaleX: 0 }, {
-        scaleX: 1,
-        duration: 5,
-        transformOrigin: 'left',
-        onComplete: () => setCurrent((prev) => (prev + 1) % slides.length)
-      });
-      navRefs.current.forEach((nav, i) => {
-        if(i !== index){
-          gsap.to(nav.querySelector<HTMLElement>('.nav-line'), { scaleX: 0, duration: 0.3, transformOrigin: 'left' });
-        }
-      });
-    };
+const animateNavLine = (index: number) => {
+  const currentNav = navRefs.current[index];
+  if (!currentNav) return; // <-- stop if null
+
+  const line = currentNav.querySelector<HTMLElement>('.nav-line');
+  if (!line) return; // <-- stop if null
+
+  gsap.fromTo(
+    line,
+    { scaleX: 0 },
+    {
+      scaleX: 1,
+      duration: 5,
+      transformOrigin: 'left',
+      onComplete: () => setCurrent((prev) => (prev + 1) % slides.length),
+    }
+  );
+
+  navRefs.current.forEach((nav, i) => {
+    if (i !== index && nav) {
+      const otherLine = nav.querySelector<HTMLElement>('.nav-line');
+      if (otherLine) {
+        gsap.to(otherLine, {
+          scaleX: 0,
+          duration: 0.3,
+          transformOrigin: 'left',
+        });
+      }
+    }
+  });
+};
   
     useEffect(() => {
       animateNavLine(current);
