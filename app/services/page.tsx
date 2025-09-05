@@ -57,7 +57,7 @@ export default function ServicesPage() {
   const navRefs = useRef([]);
 
 
-  const animateNavLine = (index) => {
+  const animateNavLine = (index:number) => {
       const line = navRefs.current[index].querySelector('.nav-line');
       gsap.fromTo(line, { scaleX: 0 }, {
         scaleX: 1,
