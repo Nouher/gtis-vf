@@ -53,7 +53,7 @@ export default function ServicesPage() {
   const miniRef = useRef(null);
   const miniLineRef = useRef(null);
   const titleRef = useRef(null);  
-  const btnRef = useRef(null);
+  const btnRef = useRef<Array<HTMLElement | null>>([]);
   const navRefs = useRef<Array<HTMLElement | null>>([]);
 
 
@@ -93,29 +93,63 @@ const animateNavLine = (index: number) => {
       animateNavLine(current);
     }, [current]);
   
-    useEffect(() => {
-      const ctx = gsap.context(() => {
-        const tl = gsap.timeline();
-  
-        gsap.set(miniLineRef.current, { display: 'inline-block', width: 0, height: '2px', backgroundColor: '#fff', marginRight: '8px', verticalAlign: 'middle' });
-        tl.to(miniLineRef.current, { width: miniRef.current.getBoundingClientRect().width, duration: 0.6, ease: 'power2.out' });
-  
-        tl.from(miniRef.current, { opacity: 0, duration: 0.6 }, "-=0.3");
-        tl.from(titleRef.current, { y: 40, opacity: 0, duration: 0.8 }, "-=0.3");
-        tl.from(btnRef.current, {
+ useEffect(() => {
+  if (!heroRef.current) return; // safety check for context
+
+  const ctx = gsap.context(() => {
+    const tl = gsap.timeline();
+
+    // check miniLineRef and miniRef
+    if (miniLineRef.current && miniRef.current) {
+      gsap.set(miniLineRef.current, {
+        display: 'inline-block',
+        width: 0,
+        height: '2px',
+        backgroundColor: '#fff',
+        marginRight: '8px',
+        verticalAlign: 'middle',
+      });
+
+      const width = miniRef.current.getBoundingClientRect().width;
+
+      tl.to(miniLineRef.current, {
+        width,
+        duration: 0.6,
+        ease: 'power2.out',
+      });
+
+      tl.from(miniRef.current, { opacity: 0, duration: 0.6 }, "-=0.3");
+    }
+
+    if (titleRef.current) {
+      tl.from(titleRef.current, { y: 40, opacity: 0, duration: 0.8 }, "-=0.3");
+    }
+
+    if (btnRef.current) {
+      tl.from(
+        btnRef.current,
+        {
           opacity: 0,
           duration: 0.6,
           onStart: () => {
-            gsap.fromTo(
-              btnRef.current.querySelector('.btn-line'),
-              { scaleX: 0, transformOrigin: 'left', backgroundColor: '#fff' },
-              { scaleX: 1, duration: 0.5 }
-            );
+            const btnLine = btnRef.current!.querySelector<HTMLElement>('.btn-line');
+            if (btnLine) {
+              gsap.fromTo(
+                btnLine,
+                { scaleX: 0, transformOrigin: 'left', backgroundColor: '#fff' },
+                { scaleX: 1, duration: 0.5 }
+              );
+            }
           },
-        }, "-=0.4");
-      }, heroRef);
-      return () => ctx.revert();
-    }, [current]);
+        },
+        "-=0.4"
+      );
+    }
+  }, heroRef);
+
+  return () => ctx.revert();
+}, [current]);
+
   
 
 
