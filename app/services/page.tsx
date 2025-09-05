@@ -52,13 +52,13 @@ export default function ServicesPage() {
   const heroRef = useRef(null);
   const miniRef = useRef(null);
   const miniLineRef = useRef(null);
-  const titleRef = useRef(null);
+  const titleRef = useRef(null);  
   const btnRef = useRef(null);
-  const navRefs = useRef([]);
+  const navRefs = useRef<Array<HTMLElement | null>>([]);
 
 
   const animateNavLine = (index:number) => {
-      const line = navRefs.current[index].querySelector('.nav-line');
+      const line = navRefs.current[index].querySelector<HTMLElement>('.nav-line');
       gsap.fromTo(line, { scaleX: 0 }, {
         scaleX: 1,
         duration: 5,
@@ -67,7 +67,7 @@ export default function ServicesPage() {
       });
       navRefs.current.forEach((nav, i) => {
         if(i !== index){
-          gsap.to(nav.querySelector('.nav-line'), { scaleX: 0, duration: 0.3, transformOrigin: 'left' });
+          gsap.to(nav.querySelector<HTMLElement>('.nav-line'), { scaleX: 0, duration: 0.3, transformOrigin: 'left' });
         }
       });
     };
