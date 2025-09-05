@@ -252,12 +252,7 @@ export default function SectorsPage() {
     return matchesCategory && matchesSearch
   })
 
-  const stats = {
-    totalProjects: sectors.reduce((sum, sector) => sum + sector.projects, 0),
-    averageRating: (sectors.reduce((sum, sector) => sum + sector.rating, 0) / sectors.length).toFixed(1),
-    totalSectors: sectors.length,
-    countries: "12+",
-  }
+
 
   return (
     <div className="min-h-screen bg-white">
