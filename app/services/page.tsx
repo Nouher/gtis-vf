@@ -49,11 +49,11 @@ export default function ServicesPage() {
   const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set())
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
     const [current, setCurrent] = useState(0);
-  const heroRef = useRef(null);
-  const miniRef = useRef(null);
-  const miniLineRef = useRef(null);
-  const titleRef = useRef(null);  
-  const btnRef = useRef<Array<HTMLElement | null>>([]);
+  const heroRef = useRef<HTMLDivElement | null>(null);
+  const miniRef = useRef<HTMLDivElement | null>(null);
+  const miniLineRef = useRef<HTMLDivElement | null>(null);
+  const titleRef = sueRef<HTMLDivElement | null>(null);  
+  const btnRef = useRef<HTMLDivElement | null>(null);
   const navRefs = useRef<Array<HTMLElement | null>>([]);
 
 
