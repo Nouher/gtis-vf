@@ -54,7 +54,7 @@ export default function ServicesPage() {
   const miniLineRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLDivElement | null>(null);  
   const btnRef = useRef<HTMLButtonElement | null>(null);
-  const navRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const navRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
 
 const animateNavLine = (index: number) => {
