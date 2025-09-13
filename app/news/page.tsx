@@ -226,18 +226,18 @@ export default function NewsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white mt-0 lg:mt-28">
+    <div className="min-h-screen bg-white  ">
       {/* Flat Hero Section */}
-      <section className="py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-40">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-5xl mx-auto">
             <div
               className={`transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
-              <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8">
+              {/* <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-sm font-medium mb-8">
                 <BookOpen className="h-4 w-4 mr-2" />
                 Industry News & Insights Hub
-              </div>
+              </div> */}
 
               <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
                 Latest Industrial
@@ -423,12 +423,7 @@ export default function NewsPage() {
                 className="bg-white rounded-2xl shadow-lg border border-gray-200/50 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Featured Badge */}
-                <div className="absolute top-4 left-4 z-20">
-                  <div className="flex items-center px-3 py-1 bg-gray-900 text-white rounded-full text-xs font-bold">
-                    <TrendingUp className="h-3 w-3 mr-1" />
-                    FEATURED
-                  </div>
-                </div>
+              
 
                 {/* Article Image */}
                 <div className="relative h-64 overflow-hidden">
@@ -518,14 +513,7 @@ export default function NewsPage() {
                 key={article.id}
                 className="bg-white rounded-2xl shadow-lg border border-gray-200/50 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group"
               >
-                {/* Trending Badge */}
-                <div className="absolute top-4 left-4 z-20">
-                  <div className="flex items-center px-3 py-1 bg-red-500 text-white rounded-full text-xs font-bold">
-                    <Zap className="h-3 w-3 mr-1" />
-                    TRENDING
-                  </div>
-                </div>
-
+              
                 {/* Article Image */}
                 <div className="relative h-48 overflow-hidden">
                   <Image

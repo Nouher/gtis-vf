@@ -77,8 +77,8 @@ export default function Home() {
                 <div ref={descRef} className="text-lg lg:text-3xl font-normal lg:font-medium mt-6 lg:mt-0 h-30 ">{t("home.subtitle")}</div>
               </div>
               <div ref={buttonsRef} className="flex gap-4 mt-20 lg:mt-48 ">
-                <button className="text-white bg-[#0E6FB7] w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold">Contact us</button>
-                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><ArrowRight size={35} className="text-[#0E6FB7]"/></button>
+                <button className="text-white  bg-[#1D1E7A]/60 hover:bg-[#1D1E7A] w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold">Contact us</button>
+                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><ArrowRight size={35} className="text-[#1D1E7A]"/></button>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function Home() {
         </section>
 
 
-        <div className="h-1 bg-sky-500 w-full"/> 
+        <div className="h-1 bg-[#1D1E7A] w-full"/> 
 
         <PowerfulStats/>
         {/* <IndustrialShowcase/> */}

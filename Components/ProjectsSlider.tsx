@@ -134,7 +134,7 @@ Built with precision and engineered for strength, our steel structures ensure du
             <Factory className="h-4 w-4 mr-2" />
             Industrial Excellence
           </div> */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-[#0E6FB7] to-gray-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#1D1E7A] via-[#0E6FB7] to-[#1D1E7A] bg-clip-text text-transparent">
             Our Industrial Capabilities
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -148,7 +148,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                    <div
                      onClick={()=>handleNavigate(service.title)}
                      key={service.id}
-                     className="h-[520px] my-4 group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 transform hover:-translate-y-2"
+                     className="h-[520px] my-4 group relative overflow-hidden cursor-pointer rounded-2xl bg-white shadow-md transition-all duration-500 transform hover:-translate-y-2"
                      // onMouseEnter={() => setHoveredItem(service.id)}
                      // onMouseLeave={() => setHoveredItem(null)}
                    >
@@ -184,7 +184,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                        <div className="mb-2">
                          <span className="text-sm text-gray-500 font-medium">{service.subtitle}</span>
                        </div>
-                       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1D1E7A] transition-colors">
                          {service.title}
                        </h3>
                        <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">{service.description}</p>
@@ -195,7 +195,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                        <Button
                          onClick={()=>handleNavigate(service.title)}
                          variant="ghost"
-                         className="w-full justify-between group-hover:bg-blue-50 group-hover:text-blue-600 transition-all duration-300"
+                         className="w-full justify-between cursor-pointer  transition-all duration-300"
                          
                          >
                              Learn More
@@ -213,7 +213,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                      </div>
        
                      {/* Hover Effect Border */}
-                     <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-2xl transition-all duration-300"></div>
+                     <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#1D1E7A]/30 rounded-2xl transition-all duration-300"></div>
                    </div>
                  ))}
       </Slider>

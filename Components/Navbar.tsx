@@ -61,7 +61,7 @@ const [scrollPos, setScrollPos] = useState(0);
         ${bgWhite ? "bg-white border-b-1 shadow-sm" : "bg-transparent text-white"}`}>
           <div className=''>
             <div className="bg-transparent  px-20 w-full items-center justify-between hidden lg:flex">
-              <div className=" flex flex-row-reverse items-center justify-between w-full h-12">
+              <div className=" flex flex-row-reverse items-center justify-between w-full h-10">
 
                 {/* <div className="flex gap-4 items-center "     >
                 <Link href="https://www.facebook.com/" className="text-white opacity-70 hover:opacity-100 "><FacebookIcon/></Link>
@@ -69,15 +69,15 @@ const [scrollPos, setScrollPos] = useState(0);
                 <Link href="https://www.facebook.com/" className="text-white opacity-70 hover:opacity-100"><LinkedInIcon/></Link>
                   
                 </div> */}
-                <div className={`flex gap-5 items-center h-full py-2 font-medium text-md`}>
+                <div className={`flex gap-5 items-center h-full py-2 font-medium text-sm`}>
                   <Link href="#" className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-blue-300">
-                    <PhoneIcon size={18} className=" "/>
+                    <PhoneIcon size={16} className=" "/>
                     <span className=" ">+212 667 060 089</span>
                   </Link>
                   <span>/</span>
                   {/* <Separator orientation="vertical" className=""/> */}
                   <Link href='mailto:CONTACT@GTIS.MA' className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-blue-300">
-                    <MailIcon size={18} className=""/>
+                    <MailIcon size={16} className=""/>
                     <span className="">CONTACT@GTIS.MA</span>
                   </Link>
                 <div className="text-md flex gap-3">

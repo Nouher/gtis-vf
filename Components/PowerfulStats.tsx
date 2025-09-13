@@ -55,28 +55,28 @@ export default function PowerfulStats() {
 
   const stats = [
     {
-      icon: <Building2 className="h-16 w-16 text-[#4682B4]" />,
+      icon: <Building2 className="h-16 w-16 text-[#1D1E7A]" />,
       number: 50,
       suffix: "+",
       title: t("stats.projects"),
       description: t("stats.projects.desc"),
     },
     {
-      icon: <Globe className="h-16 w-16 text-[#4682B4]" />,
+      icon: <Globe className="h-16 w-16 text-[#1D1E7A]" />,
       number: 10,
       suffix: "+",
       title: t("stats.countries"),
       description: t("stats.countries.desc"),
     },
     {
-      icon: <Award className="h-16 w-16 text-[#4682B4]" />,
+      icon: <Award className="h-16 w-16 text-[#1D1E7A]" />,
       number: 8,
       suffix: "+",
       title: t("stats.years"),
       description: t("stats.years.desc"),
     },
     {
-      icon: <Users className="h-16 w-16 text-[#4682B4]" />,
+      icon: <Users className="h-16 w-16 text-[#1D1E7A]" />,
       number: 150,
       suffix: "+",
       title: t("stats.professionals"),
