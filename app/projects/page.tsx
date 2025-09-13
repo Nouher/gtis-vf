@@ -337,8 +337,7 @@ export default function ProjectsPage() {
       }
     })
 
-  const featuredProject = projects[0]
-  const secondaryFeatured = projects.slice(1, 3)
+ 
   const selectedCategoryData = categories.find((cat) => cat.id === selectedCategory)
 
   return (
