@@ -23,8 +23,6 @@ import {
   GrapeIcon as Grain,
   HardHat,
   Ship,
-  Banknote,
-  Globe,
 } from "lucide-react"
 import { Button } from "@/Components/ui/button"
 import { Input } from "@/Components/ui/input"
