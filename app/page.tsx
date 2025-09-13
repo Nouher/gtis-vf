@@ -169,7 +169,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   title: "GTIS Completes Major Industrial Project",
@@ -189,9 +189,15 @@ export default function Home() {
                   excerpt:
                     "We're excited to announce our expansion into a new region, bringing our industrial solutions to more clients.",
                 },
+                   {
+                  title: "GTIS Expands Services to New Region",
+                  date: "April 15, 2025",
+                  excerpt:
+                    "We're excited to announce our expansion into a new region, bringing our industrial solutions to more clients.",
+                },
               ].map((news, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <div className="relative h-48">
+                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden h-[520px]">
+                  <div className="relative h-64">
                     <Image src={`/news-${index + 1}.jpeg`} alt={news.title} fill className="object-cover" />
                   </div>
                   <div className="p-6">

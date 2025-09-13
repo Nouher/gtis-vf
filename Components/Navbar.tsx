@@ -1,13 +1,11 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/logo.png";
+import logo from "../public/logo-v2.svg";
 import { MobileNav } from "./MobileNav";
 import { QuoteDialog } from "./QuoteDialog";
 import { useState, useEffect } from "react";
-import Topbar from "./Topbar";
 import { MailIcon, PhoneIcon } from "lucide-react";
-import { Separator } from "./ui/separator";
 import { useLanguage } from "../app/context/language-context"
 
 
@@ -59,8 +57,8 @@ const [scrollPos, setScrollPos] = useState(0);
   }, [scrollPos]);
 
     return (
-      <div className={`bg-transparent w-full fixed z-50 h-40 ${visible ? "translate-y-0" : "-translate-y-full"}
-        ${bgWhite ? "bg-white border-b-1" : "bg-transparent"}`}>
+      <div className={`bg-transparent w-full fixed z-50 h-40 hover:bg-white hover:text-gray-700 transition-all duration-150 ease-in-out  ${visible ? "translate-y-0" : "-translate-y-full"}
+        ${bgWhite ? "bg-white border-b-1 shadow-sm" : "bg-transparent text-white"}`}>
           <div className=''>
             <div className="bg-transparent  px-20 w-full items-center justify-between hidden lg:flex">
               <div className=" flex flex-row-reverse items-center justify-between w-full h-12">
@@ -71,7 +69,7 @@ const [scrollPos, setScrollPos] = useState(0);
                 <Link href="https://www.facebook.com/" className="text-white opacity-70 hover:opacity-100"><LinkedInIcon/></Link>
                   
                 </div> */}
-                <div className={`flex gap-5 items-center h-full py-2 font-bold text-md ${bgWhite ? "text-black" : "text-white"}`}>
+                <div className={`flex gap-5 items-center h-full py-2 font-medium text-md`}>
                   <Link href="#" className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-blue-300">
                     <PhoneIcon size={18} className=" "/>
                     <span className=" ">+212 667 060 089</span>
@@ -82,7 +80,7 @@ const [scrollPos, setScrollPos] = useState(0);
                     <MailIcon size={18} className=""/>
                     <span className="">CONTACT@GTIS.MA</span>
                   </Link>
-                <div className=" font-semibold text-md flex gap-3">
+                <div className="text-md flex gap-3">
                   <span className="border-b-2 border-b-blue-400 hover:scale-105 transition cursor-pointer" onClick={()=>{setLanguage("en")}}>EN</span>
                   <span>/</span>
                   <span className="hover:scale-105 transition cursor-pointer" onClick={()=>{setLanguage("fr")}}>FR</span>
@@ -94,31 +92,31 @@ const [scrollPos, setScrollPos] = useState(0);
                 
             </div>
             </div>
-        <div className={`border-t-1 bg-gradient-to-r from-white via-white/0 to-white/0 font-semibold h-18 lg:h-26 w-full flex  items-center justify-between lg:px-20 py-16" ${bgWhite ? "text-black" : "text-white"}`}>
+        <div className={`border-t-1 bg-gradient-to-r from-white via-white/0 to-white/0 font-medium h-18 lg:h-26 w-full flex  items-center justify-between lg:px-20 py-16" `}>
         <div className="flex justify-start items-center w-32 lg:w-auto h-23  z-50 ">
           <Link href="/" >
-              <Image src={logo} alt="gtis-logo" width={220} className=""/>
+              <Image src={logo} alt="gtis-logo" width={300} className=""/>
           </Link>
         </div>
         <ul className= {`hidden lg:flex justify-between gap-8 items-center uppercase text-2xl`}>
           {/* <li className="relative border-b-2 border-b-transparent  text-md hover:text-blue-400 hover:border-b-2 hover:border-b-blue-400 transition"><Link href='/'>Home</Link></li> */}
-          <li className="relative group border-b-2 border-b-transparent  text-md transition">
+          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-[#3070B1]">
             <Link href='/services'>{t("nav.services")}</Link>
             <span className="underline-snake"></span>
           </li>
-          <li className="relative group border-b-2 border-b-transparent text-md transition">
+          <li className="relative group border-b-2 border-b-transparent text-md transition hover:text-[#3070B1]">
             <Link href='/projects'>{t("nav.projects")}</Link>
             <span className="underline-snake"></span>
             </li>
-          <li className="relative group border-b-2 border-b-transparent  text-md transition">
+          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-[#3070B1]">
             <Link href='/sectors-of-activity'>{t("nav.sectors")}</Link>
             <span className="underline-snake"></span>
             </li>
-          <li className="relative group border-b-2 border-b-transparent  text-md transition">
+          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-[#3070B1]">
             <Link href='/news'>{t("nav.news")}</Link>
             <span className="underline-snake"></span>
             </li>
-          <li className="relative group border-b-2 border-b-transparent  text-md transition">
+          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-[#3070B1]">
             <Link href='/contact'>{t("nav.contact")}</Link>
             <span className="underline-snake"></span>
             </li>

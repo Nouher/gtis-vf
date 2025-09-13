@@ -344,9 +344,9 @@ export default function ProjectsPage() {
   const selectedCategoryData = categories.find((cat) => cat.id === selectedCategory)
 
   return (
-    <div className="min-h-screen bg-white mt-0 lg:">
+    <div className="min-h-screen bg-white mt-0  lg:">
       {/* Hero Section with Background Image */}
-      <section className="relative min-h-screen flex items-end pb-16 justify-center overflow-hidden">
+      <section className="relative h-[65vh] flex items-end pb-16 justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -362,15 +362,6 @@ export default function ProjectsPage() {
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            {/* Badge */}
-            {/* <div
-              className={`inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-sm font-medium mb-4 transform transition-all duration-700 ${
-                isLoaded ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
-              }`}
-            >
-              <Award className="w-4 h-4 mr-2 text-yellow-400" />
-              <span>Completed Projects Portfolio</span>
-            </div> */}
 
             {/* Title */}
             <h1
@@ -378,15 +369,13 @@ export default function ProjectsPage() {
                 isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
-              <span className="block mb-2">Our</span>
-              <span className="block bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
-                Achievements
-              </span>
+              
+                Our Works
             </h1>
 
             {/* Description */}
             <p
-              className={`text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed transform transition-all duration-700 delay-400 ${
+              className={`text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed transform transition-all duration-700 delay-400 ${
                 isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
@@ -395,7 +384,7 @@ export default function ProjectsPage() {
             </p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[
                 { number: "150+", label: "Projets Réalisés", icon: <Building2 className="h-10 w-10 text-white" />,delay: "delay-500" },
                 { number: "15+", label: "Pays", icon: <Globe className="h-10 w-10 text-white" /> ,delay: "delay-600"},
@@ -413,164 +402,13 @@ export default function ProjectsPage() {
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div
-            className={`text-center mb-16 transform transition-all duration-700 delay-300 ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
-          >
-            <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 text-sm font-medium mb-4">
-              <Star className="w-4 h-4 mr-2" />
-              Featured Projects
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Exceptional <span className="text-gray-800">Achievements</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover some of our most remarkable projects that showcase our technical expertise and quality
-              commitment.
-            </p>
-          </div>
-
-          {/* Main Featured Project */}
-          <div
-            className={`mb-12 transform transition-all duration-700 delay-500 ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
-          >
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
-              <div className="grid md:grid-cols-2 gap-0">
-                <div className="relative h-80 md:h-full">
-                  <Image
-                    src={featuredProject.image || "/placeholder.svg"}
-                    alt={featuredProject.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-6 left-6">
-                    <Badge className="bg-yellow-500 text-white px-3 py-1 text-sm font-medium">
-                      <Star className="w-3 h-3 mr-1" />
-                      Featured Project
-                    </Badge>
-                  </div>
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="flex items-center space-x-4 text-white">
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        <span className="text-sm">{featuredProject.location}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        <span className="text-sm">{featuredProject.year}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-8 md:p-12 flex flex-col justify-center">
-                  <div className="mb-4">
-                    <Badge variant="outline" className="text-gray-600 border-gray-200 mb-3">
-                      {featuredProject.subtitle}
-                    </Badge>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{featuredProject.title}</h3>
-                    <p className="text-gray-600 text-lg leading-relaxed mb-6">{featuredProject.description}</p>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="text-center p-4 bg-gray-50 rounded-xl">
-                      <div className="text-2xl font-bold text-gray-800">{featuredProject.stats.capacity}</div>
-                      <div className="text-sm text-gray-600">Capacity</div>
-                    </div>
-                    <div className="text-center p-4 bg-gray-50 rounded-xl">
-                      <div className="text-2xl font-bold text-gray-800">{featuredProject.value}</div>
-                      <div className="text-sm text-gray-600">Value</div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href={`/projects/${featuredProject.slug}`} className="flex-1">
-                      <Button className="w-full bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105">
-                        <Eye className="w-4 h-4 mr-2" />
-                        View Project
-                      </Button>
-                    </Link>
-                    <Button
-                      variant="outline"
-                      className="flex-1 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-xl bg-transparent transition-all duration-300 hover:scale-105"
-                    >
-                      <Users className="w-4 h-4 mr-2" />
-                      Contact Team
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Secondary Featured Projects */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {secondaryFeatured.map((project, index) => (
-              <div
-                key={project.id}
-                className={`bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group hover:scale-105 transform ${
-                  isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                }`}
-                style={{ transitionDelay: `${700 + index * 200}ms` }}
-              >
-                <div className="relative h-64">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-gray-800 text-white px-3 py-1 text-sm">Featured Project</Badge>
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center justify-between text-white">
-                      <div className="flex items-center">
-                        <MapPin className="w-3 h-3 mr-1" />
-                        <span className="text-xs">{project.location}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-3 h-3 mr-1" />
-                        <span className="text-xs">{project.duration}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <Badge variant="outline" className="text-gray-600 border-gray-200 mb-3 text-xs">
-                    {project.subtitle}
-                  </Badge>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">{project.description}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold text-gray-800">{project.value}</div>
-                    <Link href={`/projects/${project.slug}`}>
-                      <Button
-                        size="sm"
-                        className="bg-gray-800 hover:bg-gray-900 text-white transition-all duration-300 hover:scale-105"
-                      >
-                        <ArrowRight className="w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Search and Filter Section */}
       <section className="py-16 bg-white">

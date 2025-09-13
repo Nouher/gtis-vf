@@ -919,9 +919,9 @@ export default function ServiceDetailPage() {
   const service = allServices.find((s) => s.slug === params.slug) || allServices[0]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 mt-28">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 ">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 overflow-hidden pt-48">
         {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full filter blur-3xl animate-pulse" />

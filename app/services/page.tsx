@@ -59,7 +59,7 @@ export default function ServicesPage() {
 
 const animateNavLine = (index: number) => {
   const currentNav = navRefs.current[index];
-  if (!currentNav) return; // <-- stop if null
+  if (!currentNav) return; 
 
   const line = currentNav.querySelector<HTMLElement>('.nav-line');
   if (!line) return; // <-- stop if null
@@ -197,7 +197,7 @@ const animateNavLine = (index: number) => {
       rating: 4.9,
       projects: 50,
       features: ["Precision TIG/MIG welding", "ISO 9001 quality control", "On-site assembly", "24/7 support"],
-      price: "From $50/m²",
+      price: "",
     },
     {
       id: 2,
@@ -212,7 +212,7 @@ const animateNavLine = (index: number) => {
       rating: 4.8,
       projects: 50,
       features: ["Precision alignment", "Performance testing", "Operator training", "Maintenance programs"],
-      price: "From $25/hour",
+      price: "",
     },
     {
       id: 3,
@@ -227,7 +227,7 @@ const animateNavLine = (index: number) => {
       rating: 4.9,
       projects: 50,
       features: ["SCADA systems", "PLC programming", "Motor control", "Energy monitoring"],
-      price: "From $30/point",
+      price: "",
     },
     {
       id: 4,
@@ -242,7 +242,7 @@ const animateNavLine = (index: number) => {
       rating: 4.7,
       projects: 50,
       features: ["Custom design", "Climate control", "Inventory management", "Safety systems"],
-      price: "Custom Quote",
+      price: "",
     },
     {
       id: 5,
@@ -257,7 +257,7 @@ const animateNavLine = (index: number) => {
       rating: 4.8,
       projects: 50,
       features: ["Robotics integration", "Process optimization", "Quality control", "Remote monitoring"],
-      price: "Custom Quote",
+      price: "",
     },
     {
       id: 6,
@@ -272,7 +272,7 @@ const animateNavLine = (index: number) => {
       rating: 4.9,
       projects: 50,
       features: ["Preventive maintenance", "Emergency repairs", "Spare parts", "Performance monitoring"],
-      price: "From $40/hour",
+      price: "",
     },
     {
       id: 7,
@@ -287,7 +287,7 @@ const animateNavLine = (index: number) => {
       rating: 4.9,
       projects: 50,
       features: ["Layout planning", "Mechanical installation", "Electrical systems", "Full commissioning"],
-      price: "Custom Quote",
+      price: "",
     },
     {
       id: 8,
@@ -302,7 +302,7 @@ const animateNavLine = (index: number) => {
       rating: 4.9,
       projects: 50,
       features: ["Dust control systems", "High throughput", "Minimal losses", "Port integration"],
-      price: "Custom Quote",
+      price: "",
     },
     {
       id: 9,
@@ -317,7 +317,7 @@ const animateNavLine = (index: number) => {
       rating: 4.9,
       projects: 50,
       features: ["High-capacity storage", "Dust control", "Aeration systems", "Structural integrity"],
-      price: "Custom Quote",
+      price: "",
     },
     {
       id: 10,
@@ -332,7 +332,7 @@ const animateNavLine = (index: number) => {
       rating: 4.9,
       projects: 50,
       features: ["Custom design", "Precision fabrication", "Safety compliance", "Durability guaranteed"],
-      price: "Custom Quote",
+      price: "",
     },
   ]
 
@@ -422,15 +422,6 @@ const animateNavLine = (index: number) => {
                     </div>
                   </div>
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center text-white mr-4">
-                        {services[0].icon}
-                      </div>
-                      <div className="flex items-center">
-                        <Star className="h-4 w-4 text-blue-400 fill-current mr-1" />
-                        <span className="text-white font-medium">{services[0].rating}</span>
-                      </div>
-                    </div>
                     <h3 className="text-3xl font-bold text-white mb-4">{services[0].title}</h3>
                     <p className="text-slate-300 mb-6 leading-relaxed">{services[0].description}</p>
                     <div className="flex items-center justify-between mb-6">
@@ -456,7 +447,7 @@ const animateNavLine = (index: number) => {
                 key={service.id}
                 className="bg-white rounded-3xl shadow-lg border border-slate-200/50 overflow-hidden hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative h-48">
+                <div className="relative h-62">
                   <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
                   <div className="absolute top-4 left-4">
                     <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
@@ -466,15 +457,7 @@ const animateNavLine = (index: number) => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600">
-                      {service.icon}
-                    </div>
-                    <div className="flex items-center">
-                      <Star className="h-4 w-4 text-blue-400 fill-current mr-1" />
-                      <span className="text-sm font-medium text-slate-600">{service.rating}</span>
-                    </div>
-                  </div>
+          
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{service.title}</h3>
                   <p className="text-slate-600 text-sm mb-4 line-clamp-3">{service.description}</p>
                   <div className="flex items-center justify-between mb-4">
@@ -539,7 +522,7 @@ const animateNavLine = (index: number) => {
                 }}
               >
                 {/* Service Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-68 overflow-hidden">
                   <Image
                     src={service.image || "/placeholder.svg"}
                     alt={service.title}
@@ -563,9 +546,9 @@ const animateNavLine = (index: number) => {
                       visibleCards.has(index) ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
                     }`}
                   >
-                    <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm font-medium">
+                    {/* <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm font-medium">
                       {service.price}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -578,10 +561,10 @@ const animateNavLine = (index: number) => {
                     style={{ transitionDelay: visibleCards.has(index) ? `${(index % 3) * 150 + 200}ms` : "0ms" }}
                   >
                     <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                    <div className="flex items-center">
+                    {/* <div className="flex items-center">
                       <Star className="h-4 w-4 text-blue-400 fill-current mr-1" />
                       <span className="text-sm font-medium text-slate-600">{service.rating}</span>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div
@@ -591,7 +574,7 @@ const animateNavLine = (index: number) => {
                     style={{ transitionDelay: visibleCards.has(index) ? `${(index % 3) * 150 + 300}ms` : "0ms" }}
                   >
                     <p className="text-slate-600 text-sm mb-2">{service.subtitle}</p>
-                    <p className="text-slate-700 mb-4 leading-relaxed line-clamp-3">{service.description}</p>
+                    <p className="text-slate-700 mb-4 leading-relaxed line-clamp-2">{service.description}</p>
                   </div>
 
                   {/* Features */}
@@ -639,10 +622,10 @@ const animateNavLine = (index: number) => {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
-                    <Link href="/contact">
+                    <Link href="tel:+212667060089">
                       <Button
                         variant="outline"
-                        className="px-4 rounded-xl border-slate-300 hover:bg-slate-50 bg-transparent"
+                        className="px-4 rounded-xl border-slate-300 hover:bg-slate-50 bg-transparent cursor-pointer"
                       >
                         <Phone className="h-4 w-4" />
                       </Button>

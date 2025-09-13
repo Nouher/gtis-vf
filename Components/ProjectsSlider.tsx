@@ -148,7 +148,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                    <div
                      onClick={()=>handleNavigate(service.title)}
                      key={service.id}
-                     className="h-[520px] my-4 group relative overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                     className="h-[520px] my-4 group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 transform hover:-translate-y-2"
                      // onMouseEnter={() => setHoveredItem(service.id)}
                      // onMouseLeave={() => setHoveredItem(null)}
                    >
