@@ -34,7 +34,6 @@ export default function Navbar() {
 const [scrollPos, setScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [bgWhite, setBgWhite] = useState(false);
-   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -111,22 +110,8 @@ const [scrollPos, setScrollPos] = useState(0);
             </li>
           <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-primary">
             <Link href='/sectors-of-activity' className="flex items-center">
-            {/* <span>{t("nav.sectors")}</span>
-            <ChevronDown className="ml-1 h-5 w-5" /> */}
-
-            <div className="border-t border-gray-200">
-            <button
-              onClick={() => setIsOpen(prev => !prev)}
-              className="w-full text-left px-3 py-2 rounded hover:bg-gray-100"
-            >
-              Services
-            </button>
-            <div className="pl-4">
-              <Link href="/services/service1" className="block px-3 py-2 hover:bg-gray-100">Service 1</Link>
-              <Link href="/services/service2" className="block px-3 py-2 hover:bg-gray-100">Service 2</Link>
-              <Link href="/services/service3" className="block px-3 py-2 hover:bg-gray-100">Service 3</Link>
-            </div>
-          </div>
+            <span>{t("nav.sectors")}</span>
+            <ChevronDown className="ml-1 h-5 w-5" />
             </Link>
             <span className="underline-snake"></span>
             </li>
