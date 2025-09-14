@@ -33,8 +33,8 @@ export default function ContactPage() {
                     We Have Answers
                   </h1>
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    Discover experiences you won't find anywhere else — thoughtfully designed to immerse you in the
-                    heart of the destination.
+                    {`Discover experiences you won't find anywhere else — thoughtfully designed to immerse you in the
+                    heart of the destination.`}
                   </p>
                 </div>
 
@@ -149,7 +149,7 @@ export default function ContactPage() {
                       className="mt-1 rounded border-white/30 bg-black/20 text-amber-400 focus:ring-amber-400"
                     />
                     <label htmlFor="opt-in" className="text-sm text-gray-100">
-                      I'd like to receive exclusive offers and updates
+                      {`I'd like to receive exclusive offers and updates`}
                     </label>
                   </div>
 
