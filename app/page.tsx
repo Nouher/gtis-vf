@@ -77,8 +77,8 @@ export default function Home() {
                 <div ref={descRef} className="text-lg lg:text-3xl font-normal lg:font-medium mt-6 lg:mt-0 h-30 ">{t("home.subtitle")}</div>
               </div>
               <div ref={buttonsRef} className="flex gap-4 mt-20 lg:mt-48 ">
-                <button className="text-white  bg-[#1D1E7A]/60 hover:bg-[#1D1E7A] w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold">Contact us</button>
-                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><ArrowRight size={35} className="text-[#1D1E7A]"/></button>
+                <button className="text-white  bg-primary/60 hover:bg-primary w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold">Contact us</button>
+                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><ArrowRight size={35} className="text-primary"/></button>
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest News</h2>
-              <div className="w-20 h-1 bg-[#0E6FB7] mx-auto"></div>
+              <div className="w-20 h-1 bg-secondary mx-auto"></div>
               <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
                 Stay updated with the latest developments and news from GTIS
               </p>
@@ -197,14 +197,14 @@ export default function Home() {
                 },
               ].map((news, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden h-[520px]">
-                  <div className="relative h-64">
+                  <div className="relative h-72">
                     <Image src={`/news-${index + 1}.jpeg`} alt={news.title} fill className="object-cover" />
                   </div>
                   <div className="p-6">
-                    <p className="text-sm text[#0E6FB7] mb-2">{news.date}</p>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{news.title}</h3>
-                    <p className="text-gray-600 mb-4">{news.excerpt}</p>
-                    <Link href="#" className="inline-flex items-center text[#0E6FB7] hover:text-[#487699]">
+                    <p className="text-sm text-primary mb-2">{news.date}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-1">{news.title}</h3>
+                    <p className="text-gray-600 mb-4 line-clamp-2">{news.excerpt}</p>
+                    <Link href="#" className="inline-flex items-center text-primary hover:text-secondary transition-all ease-in-out">
                       Read more
                       <ArrowRight className="ml-2" size={16} />
                     </Link>
@@ -217,7 +217,7 @@ export default function Home() {
               
                <Button
               variant="outline"
-              className="border-2 border-[#0E6FB7] text-[#0E6FB7] hover:bg-[#0E6FB7] hover:text-white px-8 py-6 text-lg rounded-full transition-all duration-300 bg-transparent"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg rounded-full transition-all duration-300 bg-transparent"
             >
               View All News
             </Button>

@@ -5,7 +5,7 @@ import logo from "../public/logo-v2.svg";
 import { MobileNav } from "./MobileNav";
 import { QuoteDialog } from "./QuoteDialog";
 import { useState, useEffect } from "react";
-import { MailIcon, PhoneIcon } from "lucide-react";
+import { ChevronDown, MailIcon, PhoneIcon } from "lucide-react";
 import { useLanguage } from "../app/context/language-context"
 
 
@@ -34,6 +34,7 @@ export default function Navbar() {
 const [scrollPos, setScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [bgWhite, setBgWhite] = useState(false);
+   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,22 +71,22 @@ const [scrollPos, setScrollPos] = useState(0);
                   
                 </div> */}
                 <div className={`flex gap-5 items-center h-full py-2 font-medium text-sm`}>
-                  <Link href="#" className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-blue-300">
+                  <Link href="#" className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-primary hover:scale-105">
                     <PhoneIcon size={16} className=" "/>
                     <span className=" ">+212 667 060 089</span>
                   </Link>
                   <span>/</span>
                   {/* <Separator orientation="vertical" className=""/> */}
-                  <Link href='mailto:CONTACT@GTIS.MA' className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-blue-300">
+                  <Link href='mailto:CONTACT@GTIS.MA' className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-primary hover:scale-105">
                     <MailIcon size={16} className=""/>
                     <span className="">CONTACT@GTIS.MA</span>
                   </Link>
                 <div className="text-md flex gap-3">
-                  <span className="border-b-2 border-b-blue-400 hover:scale-105 transition cursor-pointer" onClick={()=>{setLanguage("en")}}>EN</span>
+                  <span className="border-b-2 border-b-secondary hover:scale-105 transition cursor-pointer text-secondary" onClick={()=>{setLanguage("en")}}>EN</span>
                   <span>/</span>
-                  <span className="hover:scale-105 transition cursor-pointer" onClick={()=>{setLanguage("fr")}}>FR</span>
+                  <span className=" border-b-2 border-b-transparent hover:border-b-secondary hover:scale-105 transition cursor-pointer hover:text-secondary" onClick={()=>{setLanguage("fr")}}>FR</span>
                   <span>/</span>
-                  <span className="hover:scale-105 transition cursor-pointer" onClick={()=>{setLanguage("es")}}>ES</span>
+                  <span className="border-b-2 border-b-transparent hover:border-b-secondary hover:scale-105 transition cursor-pointer hover:text-secondary" onClick={()=>{setLanguage("es")}}>ES</span>
                 </div>
                 </div>
               </div>
@@ -100,23 +101,40 @@ const [scrollPos, setScrollPos] = useState(0);
         </div>
         <ul className= {`hidden lg:flex justify-between gap-8 items-center uppercase text-2xl`}>
           {/* <li className="relative border-b-2 border-b-transparent  text-md hover:text-blue-400 hover:border-b-2 hover:border-b-blue-400 transition"><Link href='/'>Home</Link></li> */}
-          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-[#3070B1]">
+          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-primary">
             <Link href='/services'>{t("nav.services")}</Link>
             <span className="underline-snake"></span>
           </li>
-          <li className="relative group border-b-2 border-b-transparent text-md transition hover:text-[#3070B1]">
+          <li className="relative group border-b-2 border-b-transparent text-md transition hover:text-primary">
             <Link href='/projects'>{t("nav.projects")}</Link>
             <span className="underline-snake"></span>
             </li>
-          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-[#3070B1]">
-            <Link href='/sectors-of-activity'>{t("nav.sectors")}</Link>
+          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-primary">
+            <Link href='/sectors-of-activity' className="flex items-center">
+            {/* <span>{t("nav.sectors")}</span>
+            <ChevronDown className="ml-1 h-5 w-5" /> */}
+
+            <div className="border-t border-gray-200">
+            <button
+              onClick={() => setIsOpen(prev => !prev)}
+              className="w-full text-left px-3 py-2 rounded hover:bg-gray-100"
+            >
+              Services
+            </button>
+            <div className="pl-4">
+              <Link href="/services/service1" className="block px-3 py-2 hover:bg-gray-100">Service 1</Link>
+              <Link href="/services/service2" className="block px-3 py-2 hover:bg-gray-100">Service 2</Link>
+              <Link href="/services/service3" className="block px-3 py-2 hover:bg-gray-100">Service 3</Link>
+            </div>
+          </div>
+            </Link>
             <span className="underline-snake"></span>
             </li>
-          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-[#3070B1]">
+          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-primary">
             <Link href='/news'>{t("nav.news")}</Link>
             <span className="underline-snake"></span>
             </li>
-          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-[#3070B1]">
+          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-primary">
             <Link href='/contact'>{t("nav.contact")}</Link>
             <span className="underline-snake"></span>
             </li>

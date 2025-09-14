@@ -50,15 +50,15 @@
 }
 
 :root {
+  --primary: #1D1E7A;  /* Navy Blue */
+  --primary-foreground: #FFFFFF; /* White text on primary */
+  --secondary: #F59E0B;  /* Amber secondary */
+  --secondary-foreground: #1D1E7A; /* Navy text on amber */
   --radius: 0.625rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -141,7 +141,7 @@
   .underline-snake {
     width: 100%;
     height: 2.5px;
-    background-color: #3070B1; /* blue-500 */
+    background-color: #1D1E7A; /* blue-500 */
     transform: scaleX(0);
     transform-origin: left; /* always grow/shrink from left */
     transition: transform 0.3s ease-out;

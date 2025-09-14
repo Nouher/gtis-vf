@@ -359,15 +359,15 @@ const animateNavLine = (index: number) => {
           backgroundImage: `linear-gradient(to bottom, #1128479d, #1128479d), url(${slides[current].image})`
         }}
       >
-        <div className="relative max-w-2xl">
+        <div className="relative max-w-4xl">
           <span ref={miniLineRef}></span>
-          <span ref={miniRef} className="text-sm sm:text-base lg:text-lg uppercase tracking-widest text-white">
+          <span ref={miniRef} className="text-sm sm:text-base lg:text-2xl uppercase tracking-widest text-white">
             {slides[current].miniTitle}
           </span>
-          <h1 ref={titleRef} className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 leading-tight mt-4">
+          <h1 ref={titleRef} className="text-3xl sm:text-5xl lg:text-8xl font-extrabold mb-4 leading-tight mt-4">
             {slides[current].title}
           </h1>
-          <button ref={btnRef} className="relative group inline-flex items-center font-semibold text-white mt-4">
+          <button ref={btnRef} className="relative group inline-flex items-center font-semibold text-xl text-white mt-4">
             {slides[current].buttonText}
             <span className="btn-line block h-[2px] w-16 bg-white ml-4 origin-left transform scale-x-0"></span>
           </button>

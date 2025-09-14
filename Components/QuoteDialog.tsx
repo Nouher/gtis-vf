@@ -62,7 +62,7 @@ const [formData, setFormData] = useState({
     <Dialog >
       <form className='text-inherit'>
         <DialogTrigger asChild>
-          <Button variant="outline" size="lg" className="bg-transparent text-inherit z-50 px-3 py-2 rounded-sm animate-pulse hover:bg-transparent hover:text-blue-400 border-inherit hover:scale-105 hidden lg:flex">REQUEST FOR QUOTE</Button>
+          <Button variant="default" size="lg" className="bg-blue-950 text-white z-50 px-3 py-2 rounded-sm  hover:bg-blue-800 border-inherit hover:scale-105 hidden lg:flex">REQUEST FOR QUOTE</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[1024px] ">
            <div className="flex items-center space-x-4">
