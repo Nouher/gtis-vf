@@ -4,7 +4,7 @@ import Link from "next/link";
 import logo from "../public/logo-v2.svg";
 import { MobileNav } from "./MobileNav";
 import { QuoteDialog } from "./QuoteDialog";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, MailIcon, PhoneIcon } from "lucide-react";
 import { useLanguage } from "../app/context/language-context"
 
@@ -34,6 +34,56 @@ export default function Navbar() {
 const [scrollPos, setScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [bgWhite, setBgWhite] = useState(false);
+  const [isSectorsOpen, setIsSectorsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsSectorsOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
+
+  const sectors = [
+    {
+      name: "Flour Mills",
+      href: "/sectors/flour-mills",
+      description: "GTIS designs and installs complete flour milling lines, storage silos, and automated systems. Trusted across Africa & the Middle East for efficiency and reliability.",
+    },
+    {
+      name: "Pasta & Rice Plants",
+      href: "/sectors/pasta-rice",
+      description: "Complete pasta and rice production lines with GTIS: mixing, extrusion, drying, polishing, and packaging. Boost efficiency and reduce waste with our turnkey solutions.",
+    },
+    {
+      name: "Beverage & Oil Filling Systems",
+      href: "/sectors/beverage-oil",
+      description: "GTIS provides automated bottling and oil filling systems for water, juices, carbonated drinks, and edible oils. Hygiene-focused, efficient, and scalable solutions.",
+    },
+    {
+      name: "Animal Feed Production",
+      href: "/sectors/animal-feed",
+      description: "GTIS designs and installs complete feed plants for poultry, livestock, aquaculture, and pet food. Energy-efficient, automated, and reliable turnkey facilities.",
+    },
+    {
+      name: "Cement & Plaster Industries",
+      href: "/sectors/cement-plaster",
+      description: "GTIS delivers cement and plaster plants with silo fabrication, kilns, conveyors, and dust collection systems. Reliable turnkey solutions across Africa & beyond.",
+    },
+    {
+      name: "Metal Structures & Logistics Facilities",
+      href: "/sectors/metal-structures",
+      description: "GTIS fabricates and installs steel structures, warehouses, and logistics hubs. Heavy-duty, safe, and sustainable turnkey solutions.",
+    },
+  ]
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,8 +107,16 @@ const [scrollPos, setScrollPos] = useState(0);
   }, [scrollPos]);
 
     return (
-      <div className={`bg-transparent w-full fixed z-50 h-40 hover:bg-white hover:text-gray-700 transition-all duration-150 ease-in-out  ${visible ? "translate-y-0" : "-translate-y-full"}
+      <div className={`bg-transparent w-full fixed z-50 hover:backdrop-blur-md bg-gradient-to-r  from-white/80 via-white/0 to-white/0 hover:bg-white hover:text-gray-700 transition-all duration-150 ease-in-out group ${visible ? "translate-y-0" : "-translate-y-full"}
         ${bgWhite ? "bg-white border-b-1 shadow-sm" : "bg-transparent text-white"}`}>
+          <div className="flex w-full justify-between items-center pl-6">
+              <div className="flex justify-start items-center w-32 lg:w-auto h-23 z-50  ">
+          <Link href="/" >
+              <Image src={logo} alt="gtis-logo" width={400} className="relative top-0 left-0"/>
+          </Link>
+        </div>
+        <div className="flex flex-col w-full">
+
           <div className=''>
             <div className="bg-transparent  px-20 w-full items-center justify-between hidden lg:flex">
               <div className=" flex flex-row-reverse items-center justify-between w-full h-10">
@@ -70,7 +128,7 @@ const [scrollPos, setScrollPos] = useState(0);
                   
                 </div> */}
                 <div className={`flex gap-5 items-center h-full py-2 font-medium text-sm`}>
-                  <Link href="#" className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-primary hover:scale-105">
+                  <Link href="tel:+212667060089" className="flex gap-2 items-center hover:opacity-100 transition cursor-pointer hover:text-primary hover:scale-105">
                     <PhoneIcon size={16} className=" "/>
                     <span className=" ">+212 667 060 089</span>
                   </Link>
@@ -91,13 +149,12 @@ const [scrollPos, setScrollPos] = useState(0);
               </div>
                 
             </div>
+            <div className="h-[1px] w-full bg-gradient-to-r  from-white/0 via-white/0 to-white/80 group-hover:to-gray-400"/>
             </div>
-        <div className={`border-t-1 bg-gradient-to-r from-white via-white/0 to-white/0 font-medium h-18 lg:h-26 w-full flex  items-center justify-between lg:px-20 py-16" `}>
-        <div className="flex justify-start items-center w-32 lg:w-auto h-23  z-50 ">
-          <Link href="/" >
-              <Image src={logo} alt="gtis-logo" width={300} className=""/>
-          </Link>
-        </div>
+
+            
+        <div className={` font-medium h-18 lg:h-26 w-full flex  items-center justify-between lg:px-20 " `}>
+      
         <ul className= {`hidden lg:flex justify-between gap-8 items-center uppercase text-2xl`}>
           {/* <li className="relative border-b-2 border-b-transparent  text-md hover:text-blue-400 hover:border-b-2 hover:border-b-blue-400 transition"><Link href='/'>Home</Link></li> */}
           <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-primary">
@@ -108,12 +165,53 @@ const [scrollPos, setScrollPos] = useState(0);
             <Link href='/projects'>{t("nav.projects")}</Link>
             <span className="underline-snake"></span>
             </li>
-          <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-primary">
-            <Link href='/sectors-of-activity' className="flex items-center">
+          <li className="relative  border-b-2 border-b-transparent  text-md transition">
+            {/* <Link href='/sectors-of-activity' className="flex items-center">
             <span>{t("nav.sectors")}</span>
-            <ChevronDown className="ml-1 h-5 w-5" />
-            </Link>
-            <span className="underline-snake"></span>
+            <ChevronDown className="ml-1 h-6 w-6" />
+            </Link> */}
+            {/* <span className="underline-snake"></span> */}
+             {/* Services Dropdown */}
+              {/* Services Dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setIsSectorsOpen(!isSectorsOpen)}
+                  className="uppercase transition-colors flex items-center"
+                  aria-expanded={isSectorsOpen}
+                  aria-haspopup="true"
+                >
+                  Sectors of Activity
+                  <svg
+                    className={`ml-1 h-5 w-5 transition-transform duration-200 ${isSectorsOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {/* Dropdown Menu */}
+                {isSectorsOpen && (
+                  <div className="absolute left-0 mt-2 w-[40rem] bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                    <div className="py-1">
+                      {sectors.map((sector) => (
+                        <Link
+                          key={sector.name}
+                          href={sector.href}
+                          className="block px-4 py-3 text-sm hover:bg-gray-100/50 transition-colors group"
+                          onClick={() => setIsSectorsOpen(false)}
+                        >
+                          <div className="text-gray-900 text-lg group-hover:text-primary font-medium capitalize">{sector.name}</div>
+                          <div className="text-gray-500 text-md mt-1 capitalize line-clamp-2">{sector.description}</div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+
             </li>
           <li className="relative group border-b-2 border-b-transparent  text-md transition hover:text-primary">
             <Link href='/news'>{t("nav.news")}</Link>
@@ -132,6 +230,8 @@ const [scrollPos, setScrollPos] = useState(0);
         </div>
 
         </div>
+        </div>
+          </div>
       </div>
     );
   }

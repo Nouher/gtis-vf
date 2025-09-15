@@ -77,17 +77,17 @@ export default function Home() {
                 <div ref={descRef} className="text-lg lg:text-3xl font-normal lg:font-medium mt-6 lg:mt-0 h-30 ">{t("home.subtitle")}</div>
               </div>
               <div ref={buttonsRef} className="flex gap-4 mt-20 lg:mt-48 ">
-                <button className="text-white  bg-primary/60 hover:bg-primary w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold">Contact us</button>
-                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><ArrowRight size={35} className="text-primary"/></button>
+                <button className="text-white  bg-primary/60 hover:bg-primary w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold"><a href="/contact">Contact us</a></button>
+                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><a href="/services"><ArrowRight size={35} className="text-primary"/></a></button>
               </div>
             </div>
           </div>
           <div className="absolute bottom-0 right-0 h-auto flex flex-col items-center gap-6 p-8 rounded-lg">
-            <a href=""><Image src="/social-media-icons/icon-linkedin-white.svg" alt="LinkedIn" width={24} height={24} className=""/></a>
-            <a href=""><Image src="/social-media-icons/icon-facebook-white.svg" alt="Facebook" width={24} height={24} className=""/></a>
-            <a href=""><Image src="/social-media-icons/icon-instagram-white.svg" alt="Instagram" width={24} height={24} className=""/></a>
-            <a href=""><Image src="/social-media-icons/icon-twitter-white.svg" alt="Twitter" width={24} height={24} className=""/></a>
-            <a href=""><Image src="/social-media-icons/icon-youtube-white.svg" alt="Youtube" width={24} height={24} className=""/></a>
+            <a href="https://www.linkedin.com/company/global.technical.industry.services"><Image src="/social-media-icons/icon-linkedin-white.svg" alt="LinkedIn" width={24} height={24} className=""/></a>
+            <a href="ttps://web.facebook.com/p/gtisma-100046893433733/?_rdc=1&_rdr#"><Image src="/social-media-icons/icon-facebook-white.svg" alt="Facebook" width={24} height={24} className=""/></a>
+            <a href="https://www.instagram.com/gtis.ma/"><Image src="/social-media-icons/icon-instagram-white.svg" alt="Instagram" width={24} height={24} className=""/></a>
+            <a href="#"><Image src="/social-media-icons/icon-twitter-white.svg" alt="Twitter" width={24} height={24} className=""/></a>
+            <a href="#"><Image src="/social-media-icons/icon-youtube-white.svg" alt="Youtube" width={24} height={24} className=""/></a>
 
           </div>
         </section>
@@ -242,7 +242,7 @@ export default function Home() {
                     </p>
         
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                      <Link href="/contact">
+                      <Link href="tel:+212667060089">
                         <Button className="bg-white text-slate-900 hover:bg-slate-100 px-10 py-6 text-lg rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300">
                           <Phone className="mr-2 h-5 w-5" />
                           Get Free Quote

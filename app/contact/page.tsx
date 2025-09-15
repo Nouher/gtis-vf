@@ -21,7 +21,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-black/70"></div>
 
         {/* Hero Content */}
-        <div className="relative z-10 min-h-screen flex items-start pt-62 pb-31">
+        <div className="relative z-10 min-h-screen flex items-start pt-48 pb-31">
           <div className="max-w-7xl mx-auto px-4 w-full">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left Panel - Contact Info */}

@@ -10,22 +10,22 @@ export default function Footer() {
             <div className="col-span-2 pr-10">
               {/* <h3 className="text-xl font-bold mb-4">About GTIS</h3> */}
               <div className="mb-10">
-                <Image src="/logo-white.png" alt="btis logo" width={300} height={300}/>
+                <Image src="/logo-white.svg" alt="btis logo" width={300} height={300}/>
               </div>
               <p className="text-gray-400">
                 GTIS specializes in industrial solutions, including metallic, mechanical, and electrical assembly,
                 automation, maintenance, and engineering.
               </p>
               <div className="flex space-x-4 mt-4">
-                <Link href="#" className="text-gray-400 hover:text-white">
+                <a target="_blank" href="https://web.facebook.com/p/gtisma-100046893433733/?_rdc=1&_rdr#" className="text-gray-400 hover:text-white">
                   <Facebook size={20} />
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-white">
+                </a>
+                <a target="_blank"  href="https://www.instagram.com/gtis.ma/" className="text-gray-400 hover:text-white">
                   <Instagram size={20} />
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-white">
+                </a>
+                <a target="_blank"  href="https://www.linkedin.com/company/global.technical.industry.services" className="text-gray-400 hover:text-white">
                   <Linkedin size={20} />
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -129,13 +129,17 @@ export default function Footer() {
                   <MapPin size={16} className="mr-2" />
                   <span>123 Industrial Zone, Casablanca, Morocco</span>
                 </li>
-                <li className="flex items-center">
-                  <Phone size={16} className="mr-2" />
-                  <span>+212 667 060 089</span>
+                <li >
+                  <Link href="tel:+212667060089" className="flex items-center cursor-pointer hover:text-white">
+                    <Phone size={16} className="mr-2" />
+                    <span>+212 667 060 089</span>
+                  </Link>
                 </li>
-                <li className="flex items-center">
-                  <Mail size={16} className="mr-2" />
-                  <span>contact@gtis.ma</span>
+                <li >
+                  <Link href="tel:+212667060089" className="flex items-center cursor-pointer hover:text-white">
+                    <Mail size={16} className="mr-2" />
+                    <span>contact@gtis.ma</span>
+                  </Link>
                 </li>
               </ul>
             </div>
