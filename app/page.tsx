@@ -77,8 +77,8 @@ export default function Home() {
                 <div ref={descRef} className="text-lg lg:text-3xl font-normal lg:font-medium mt-6 lg:mt-0 h-30 ">{t("home.subtitle")}</div>
               </div>
               <div ref={buttonsRef} className="flex gap-4 mt-20 lg:mt-48 ">
-                <button className="text-white  bg-primary/60 hover:bg-primary w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold"><a href="/contact">Contact us</a></button>
-                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><a href="/services"><ArrowRight size={35} className="text-primary"/></a></button>
+                <button className="text-white  bg-primary/60 hover:bg-primary w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold"><Link href="/contact">Contact us</Link></button>
+                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><Link href="/services"><ArrowRight size={35} className="text-primary"/></Link></button>
               </div>
             </div>
           </div>

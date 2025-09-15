@@ -4,7 +4,6 @@ import { Button } from "@/Components/ui/button"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { QuoteDialog } from "@/Components/QuoteDialog"
 
 interface SectorPageProps {
   params: Promise<{ slug: string }>
