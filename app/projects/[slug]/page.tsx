@@ -24,7 +24,7 @@ import { Button } from "@/Components/ui/button"
 import { Badge } from "@/Components/ui/badge"
 import ProjectCarousel from "../../../Components/ProjectCarousel"
 import { getProjectBySlug, getRelatedProjects } from "../../data/projects"
-import { projects,Project } from "../../data/projects"
+import { Project } from "../../data/projects"
 
 
 interface ProjectPageProps {
