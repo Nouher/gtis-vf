@@ -28,202 +28,205 @@ import { Button } from "@/Components/ui/button"
 import { Input } from "@/Components/ui/input"
 import { Badge } from "@/Components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/Components/ui/select"
+import { projects } from "../data/projects"
 
 
-const projects = [
-  {
-    id: 1,
-    slug: "grain-terminal-morocco",
-    title: "Grain Terminal Complex - Moroccoaaa",
-    subtitle: "Port Storage Facility",
-    description:
-      "Complete installation of a 50,000-ton grain storage terminal at Casablanca Port, including 8 flat-bottom silos, pneumatic unloading systems, and automated handling equipment.",
-    image: "/projects/img1.jpeg",
-    location: "Casablanca, Morocco",
-    client: "Morocco Grain Authority",
-    duration: "18 months",
-    year: "2023",
-    value: "$12.5M",
-    category: "port-facilities",
-    status: "completed",
-    rating: 4.9,
-    features: ["50,000-ton capacity", "8 flat-bottom silos", "Pneumatic unloading", "Automated systems"],
-    stats: {
-      capacity: "50,000 tons",
-      silos: 8,
-      timeline: "18 months",
-      workers: 45,
-    },
-  },
-  {
-    id: 2,
-    slug: "feed-mill-tunisia",
-    title: "Modern Feed Mill - Tunisia",
-    subtitle: "Complete Processing Plant",
-    description:
-      "Turnkey installation of a 200-ton/day feed mill including grain intake, cleaning, grinding, mixing, pelleting, and packaging systems with full automation.",
-    image: "/projects/img2.jpg",
-    location: "Tunis, Tunisia",
-    client: "Tunisia Feed Industries",
-    duration: "12 months",
-    year: "2023",
-    value: "$8.2M",
-    category: "feed-mills",
-    status: "completed",
-    rating: 4.8,
-    features: ["200 tons/day capacity", "Full automation", "Quality control", "Energy efficient"],
-    stats: {
-      capacity: "200 tons/day",
-      silos: 12,
-      timeline: "12 months",
-      workers: 32,
-    },
-  },
-  {
-    id: 3,
-    slug: "flour-mill-algeria",
-    title: "Industrial Flour Mill - Algeria",
-    subtitle: "Wheat Processing Facility",
-    description:
-      "Installation of a 300-ton/day wheat flour mill with advanced cleaning systems, roller mills, sifters, and automated packaging lines.",
-    image: "/projects/img3.jpeg",
-    location: "Algiers, Algeria",
-    client: "Algerian Milling Corp",
-    duration: "15 months",
-    year: "2022",
-    value: "$15.8M",
-    category: "flour-mills",
-    status: "completed",
-    rating: 4.9,
-    features: ["300 tons/day capacity", "Advanced cleaning", "Roller mills", "Automated packaging"],
-    stats: {
-      capacity: "300 tons/day",
-      silos: 16,
-      timeline: "15 months",
-      workers: 52,
-    },
-  },
-  {
-    id: 4,
-    slug: "livestock-farm-egypt",
-    title: "Modern Livestock Farm - Egypt",
-    subtitle: "Poultry & Cattle Facility",
-    description:
-      "Complete installation of a modern livestock farm with automated feeding systems, climate control, and waste management for 10,000 poultry and 500 cattle.",
-    image: "/projects/img4.jpeg",
-    location: "Cairo, Egypt",
-    client: "Egyptian Livestock Ltd",
-    duration: "10 months",
-    year: "2022",
-    value: "$6.5M",
-    category: "livestock",
-    status: "completed",
-    rating: 4.7,
-    features: ["10,000 poultry capacity", "500 cattle capacity", "Climate control", "Automated feeding"],
-    stats: {
-      capacity: "10,500 animals",
-      silos: 8,
-      timeline: "10 months",
-      workers: 28,
-    },
-  },
-  {
-    id: 5,
-    slug: "cement-silos-libya",
-    title: "Cement Storage Silos - Libya",
-    subtitle: "Industrial Storage Complex",
-    description:
-      "Installation of 6 high-capacity cement silos with dust collection systems, pneumatic conveying, and automated loading systems for a major cement plant.",
-    image: "/projects/img5.jpeg",
-    location: "Tripoli, Libya",
-    client: "Libya Cement Industries",
-    duration: "14 months",
-    year: "2021",
-    value: "$9.8M",
-    category: "cement-storage",
-    status: "completed",
-    rating: 4.8,
-    features: ["6 cement silos", "Dust collection", "Pneumatic conveying", "Automated loading"],
-    stats: {
-      capacity: "30,000 tons",
-      silos: 6,
-      timeline: "14 months",
-      workers: 38,
-    },
-  },
-  {
-    id: 6,
-    slug: "grain-elevator-senegal",
-    title: "Grain Elevator Complex - Senegal",
-    subtitle: "Agricultural Storage Hub",
-    description:
-      "Construction of a modern grain elevator with 25,000-ton capacity, including intake systems, cleaning equipment, and rail/truck loading facilities.",
-    image: "/projects/img6.jpg",
-    location: "Dakar, Senegal",
-    client: "Senegal Agricultural Board",
-    duration: "16 months",
-    year: "2021",
-    value: "$11.2M",
-    category: "grain-elevators",
-    status: "completed",
-    rating: 4.9,
-    features: ["25,000-ton capacity", "Rail loading", "Truck loading", "Grain cleaning"],
-    stats: {
-      capacity: "25,000 tons",
-      silos: 10,
-      timeline: "16 months",
-      workers: 42,
-    },
-  },
-  {
-    id: 7,
-    slug: "steel-structures-ghana",
-    title: "Industrial Steel Structures - Ghana",
-    subtitle: "Manufacturing Complex",
-    description:
-      "Fabrication and installation of custom steel structures including warehouses, processing buildings, and support structures for an agro-industrial complex.",
-    image: "/projects/img7.jpeg",
-    location: "Accra, Ghana",
-    client: "Ghana Agro Industries",
-    duration: "8 months",
-    year: "2020",
-    value: "$4.8M",
-    category: "steel-structures",
-    status: "completed",
-    rating: 4.6,
-    features: ["Custom steel work", "Warehouses", "Processing buildings", "Support structures"],
-    stats: {
-      capacity: "15,000 m²",
-      silos: 0,
-      timeline: "8 months",
-      workers: 35,
-    },
-  },
-  {
-    id: 8,
-    slug: "port-unloader-ivory-coast",
-    title: "Port Unloader System - Ivory Coast",
-    subtitle: "Maritime Terminal Equipment",
-    description:
-      "Installation of advanced pneumatic unloading systems for bulk grain handling at Abidjan Port, increasing terminal efficiency by 300%.",
-    image: "/projects/img8.jpeg",
-    location: "Abidjan, Ivory Coast",
-    client: "Port Authority of Abidjan",
-    duration: "6 months",
-    year: "2020",
-    value: "$7.5M",
-    category: "port-equipment",
-    status: "completed",
-    rating: 4.8,
-    features: ["Pneumatic unloading", "Bulk handling", "300% efficiency increase", "Dust control"],
-    stats: {
-      capacity: "500 tons/hour",
-      silos: 0,
-      timeline: "6 months",
-      workers: 25,
-    },
-  },
-]
+// const projects = [
+//   {
+//     id: 1,
+//     slug: "grain-terminal-morocco",
+//     title: "Grain Terminal Complex - Moroccoaaa",
+//     subtitle: "Port Storage Facility",
+//     description:
+//       "Complete installation of a 50,000-ton grain storage terminal at Casablanca Port, including 8 flat-bottom silos, pneumatic unloading systems, and automated handling equipment.",
+//     image: "/projects/img1.jpeg",
+//     location: "Casablanca, Morocco",
+//     client: "Morocco Grain Authority",
+//     duration: "18 months",
+//     year: "2023",
+//     value: "$12.5M",
+//     category: "port-facilities",
+//     status: "completed",
+//     rating: 4.9,
+//     features: ["50,000-ton capacity", "8 flat-bottom silos", "Pneumatic unloading", "Automated systems"],
+//     stats: {
+//       capacity: "50,000 tons",
+//       silos: 8,
+//       timeline: "18 months",
+//       workers: 45,
+//     },
+//   },
+//   {
+//     id: 2,
+//     slug: "feed-mill-tunisia",
+//     title: "Modern Feed Mill - Tunisia",
+//     subtitle: "Complete Processing Plant",
+//     description:
+//       "Turnkey installation of a 200-ton/day feed mill including grain intake, cleaning, grinding, mixing, pelleting, and packaging systems with full automation.",
+//     image: "/projects/img2.jpg",
+//     location: "Tunis, Tunisia",
+//     client: "Tunisia Feed Industries",
+//     duration: "12 months",
+//     year: "2023",
+//     value: "$8.2M",
+//     category: "feed-mills",
+//     status: "completed",
+//     rating: 4.8,
+//     features: ["200 tons/day capacity", "Full automation", "Quality control", "Energy efficient"],
+//     stats: {
+//       capacity: "200 tons/day",
+//       silos: 12,
+//       timeline: "12 months",
+//       workers: 32,
+//     },
+//   },
+//   {
+//     id: 3,
+//     slug: "flour-mill-algeria",
+//     title: "Industrial Flour Mill - Algeria",
+//     subtitle: "Wheat Processing Facility",
+//     description:
+//       "Installation of a 300-ton/day wheat flour mill with advanced cleaning systems, roller mills, sifters, and automated packaging lines.",
+//     image: "/projects/img3.jpeg",
+//     location: "Algiers, Algeria",
+//     client: "Algerian Milling Corp",
+//     duration: "15 months",
+//     year: "2022",
+//     value: "$15.8M",
+//     category: "flour-mills",
+//     status: "completed",
+//     rating: 4.9,
+//     features: ["300 tons/day capacity", "Advanced cleaning", "Roller mills", "Automated packaging"],
+//     stats: {
+//       capacity: "300 tons/day",
+//       silos: 16,
+//       timeline: "15 months",
+//       workers: 52,
+//     },
+//   },
+//   {
+//     id: 4,
+//     slug: "livestock-farm-egypt",
+//     title: "Modern Livestock Farm - Egypt",
+//     subtitle: "Poultry & Cattle Facility",
+//     description:
+//       "Complete installation of a modern livestock farm with automated feeding systems, climate control, and waste management for 10,000 poultry and 500 cattle.",
+//     image: "/projects/img4.jpeg",
+//     location: "Cairo, Egypt",
+//     client: "Egyptian Livestock Ltd",
+//     duration: "10 months",
+//     year: "2022",
+//     value: "$6.5M",
+//     category: "livestock",
+//     status: "completed",
+//     rating: 4.7,
+//     features: ["10,000 poultry capacity", "500 cattle capacity", "Climate control", "Automated feeding"],
+//     stats: {
+//       capacity: "10,500 animals",
+//       silos: 8,
+//       timeline: "10 months",
+//       workers: 28,
+//     },
+//   },
+//   {
+//     id: 5,
+//     slug: "cement-silos-libya",
+//     title: "Cement Storage Silos - Libya",
+//     subtitle: "Industrial Storage Complex",
+//     description:
+//       "Installation of 6 high-capacity cement silos with dust collection systems, pneumatic conveying, and automated loading systems for a major cement plant.",
+//     image: "/projects/img5.jpeg",
+//     location: "Tripoli, Libya",
+//     client: "Libya Cement Industries",
+//     duration: "14 months",
+//     year: "2021",
+//     value: "$9.8M",
+//     category: "cement-storage",
+//     status: "completed",
+//     rating: 4.8,
+//     features: ["6 cement silos", "Dust collection", "Pneumatic conveying", "Automated loading"],
+//     stats: {
+//       capacity: "30,000 tons",
+//       silos: 6,
+//       timeline: "14 months",
+//       workers: 38,
+//     },
+//   },
+//   {
+//     id: 6,
+//     slug: "grain-elevator-senegal",
+//     title: "Grain Elevator Complex - Senegal",
+//     subtitle: "Agricultural Storage Hub",
+//     description:
+//       "Construction of a modern grain elevator with 25,000-ton capacity, including intake systems, cleaning equipment, and rail/truck loading facilities.",
+//     image: "/projects/img6.jpg",
+//     location: "Dakar, Senegal",
+//     client: "Senegal Agricultural Board",
+//     duration: "16 months",
+//     year: "2021",
+//     value: "$11.2M",
+//     category: "grain-elevators",
+//     status: "completed",
+//     rating: 4.9,
+//     features: ["25,000-ton capacity", "Rail loading", "Truck loading", "Grain cleaning"],
+//     stats: {
+//       capacity: "25,000 tons",
+//       silos: 10,
+//       timeline: "16 months",
+//       workers: 42,
+//     },
+//   },
+//   {
+//     id: 7,
+//     slug: "steel-structures-ghana",
+//     title: "Industrial Steel Structures - Ghana",
+//     subtitle: "Manufacturing Complex",
+//     description:
+//       "Fabrication and installation of custom steel structures including warehouses, processing buildings, and support structures for an agro-industrial complex.",
+//     image: "/projects/img7.jpeg",
+//     location: "Accra, Ghana",
+//     client: "Ghana Agro Industries",
+//     duration: "8 months",
+//     year: "2020",
+//     value: "$4.8M",
+//     category: "steel-structures",
+//     status: "completed",
+//     rating: 4.6,
+//     features: ["Custom steel work", "Warehouses", "Processing buildings", "Support structures"],
+//     stats: {
+//       capacity: "15,000 m²",
+//       silos: 0,
+//       timeline: "8 months",
+//       workers: 35,
+//     },
+//   },
+//   {
+//     id: 8,
+//     slug: "port-unloader-ivory-coast",
+//     title: "Port Unloader System - Ivory Coast",
+//     subtitle: "Maritime Terminal Equipment",
+//     description:
+//       "Installation of advanced pneumatic unloading systems for bulk grain handling at Abidjan Port, increasing terminal efficiency by 300%.",
+//     image: "/projects/img8.jpeg",
+//     location: "Abidjan, Ivory Coast",
+//     client: "Port Authority of Abidjan",
+//     duration: "6 months",
+//     year: "2020",
+//     value: "$7.5M",
+//     category: "port-equipment",
+//     status: "completed",
+//     rating: 4.8,
+//     features: ["Pneumatic unloading", "Bulk handling", "300% efficiency increase", "Dust control"],
+//     stats: {
+//       capacity: "500 tons/hour",
+//       silos: 0,
+//       timeline: "6 months",
+//       workers: 25,
+//     },
+//   },
+// ]
+
+
 
 const categories = [
   {
@@ -548,7 +551,7 @@ export default function ProjectsPage() {
                 }`}
                 style={{ transitionDelay: `${300 + index * 100}ms` }}
               >
-                <div className="relative h-64">
+                <div className="relative h-98 overflow-hidden">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
@@ -559,7 +562,7 @@ export default function ProjectsPage() {
                   <div className="absolute top-4 left-4">
                     <Badge className="bg-green-600 text-white px-3 py-1 text-xs">
                       <CheckCircle className="w-3 h-3 mr-1" />
-                      {project.status === "completed" ? "Completed" : "In Progress"}
+                      {project.status.toLowerCase() === "completed" ? "Completed" : "In Progress"}
                     </Badge>
                   </div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -568,10 +571,10 @@ export default function ProjectsPage() {
                         <MapPin className="w-3 h-3 mr-1" />
                         <span className="text-xs font-medium">{project.location}</span>
                       </div>
-                      <div className="flex items-center">
+                      {/* <div className="flex items-center">
                         <Star className="w-3 h-3 mr-1 text-yellow-400" />
                         <span className="text-xs font-medium">{project.rating}</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -591,11 +594,11 @@ export default function ProjectsPage() {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">{project.description}</p>
 
                   <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="text-center p-2 bg-gray-50 rounded-lg">
+                    <div className="text-center p-2 bg-primary/10 rounded-lg">
                       <div className="text-sm font-bold text-gray-800">{project.stats.capacity}</div>
                       <div className="text-xs text-gray-600">Capacity</div>
                     </div>
-                    <div className="text-center p-2 bg-gray-50 rounded-lg">
+                    <div className="text-center p-2 bg-primary/10  rounded-lg">
                       <div className="text-sm font-bold text-gray-800">{project.duration}</div>
                       <div className="text-xs text-gray-600">Duration</div>
                     </div>
@@ -651,7 +654,7 @@ export default function ProjectsPage() {
                 isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
-              <Badge className="bg-yellow-100 text-yellow-800 px-4 py-2 text-sm font-medium mb-4">
+              <Badge className="bg-primary/10 text-primary px-4 py-2 text-sm font-medium mb-4">
                 Excellence Guaranteed
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -665,19 +668,19 @@ export default function ProjectsPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <Award className="w-12 h-12 text-yellow-600" />,
+                  icon: <Award className="w-12 h-12 text-primary" />,
                   title: "Certified Quality",
                   description:
                     "All our projects comply with international ISO 9001 standards and the most demanding industrial standards.",
                 },
                 {
-                  icon: <Clock className="w-12 h-12 text-green-600" />,
+                  icon: <Clock className="w-12 h-12 text-primary" />,
                   title: "On-Time Delivery",
                   description:
                     "98% of our projects are delivered on schedule, thanks to our rigorous planning and expertise.",
                 },
                 {
-                  icon: <Users className="w-12 h-12 text-gray-600" />,
+                  icon: <Users className="w-12 h-12 text-primary" />,
                   title: "Expert Team",
                   description:
                     "Our engineers and technicians have over 15 years of combined experience in the agro-industrial sector.",
@@ -709,7 +712,7 @@ export default function ProjectsPage() {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Start Your <span className="text-yellow-400">Project</span>?
+              Ready to Start Your <span className="text-secondary">Project</span>{` ?`}
             </h2>
             <p className="text-xl mb-12 opacity-90">
               Contact us today to discuss your needs and get a personalized quote for your industrial project.
@@ -724,7 +727,7 @@ export default function ProjectsPage() {
               </Link>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg rounded-2xl font-semibold bg-transparent transition-all duration-300 hover:scale-105"
+                className="border-white hover:text-white text-white hover:bg-white/10 px-8 py-4 text-lg rounded-2xl font-semibold bg-transparent transition-all duration-300 hover:scale-105"
               >
                 <Eye className="w-5 h-5 mr-2" />
                 View More Projects
