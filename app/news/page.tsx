@@ -67,16 +67,9 @@ export default function NewsPage() {
   const filteredArticles =
     selectedCategory === "all" ? articles : articles.filter((article) => article.category === selectedCategory)
 
-  const featuredArticles = articles.filter((article) => article.featured)
   const trendingArticles = articles.filter((article) => article.trending)
   // const latestArticles = articles.slice(0, 4)
 
-  const stats = {
-    totalArticles: articles.length,
-    totalViews: articles.reduce((sum, article) => sum + article.views, 0),
-    categories: categories.length - 1,
-    authors: [...new Set(articles.map((a) => a.author))].length,
-  }
 
   return (
     <div className="min-h-screen bg-white  ">
