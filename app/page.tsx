@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { ArrowRight, Award, Calendar, Mail, Phone, Shield } from "lucide-react";
+import { ArrowRight, Award, Calendar, Mail, Phone, Shield, TrendingUp } from "lucide-react";
 // import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
 import PowerfulStats from "@/Components/PowerfulStats";
@@ -169,60 +169,92 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
                 {
-                  title: "GTIS Completes Major Industrial Project",
-                  date: "May 10, 2025",
-                  excerpt:
-                    "GTIS successfully completed a major industrial installation project for a leading manufacturing company.",
+                  id:1,
+                  slug: "gtis-grain-milling-expo-casablanca",
+                  title: "GTIS to Present Cutting-Edge Industrial Solutions at the Grain & Milling Expo Casablanca",
+                  subtitle: "Leading innovation in the grain and milling industry",
+                  excerpt: "Explore the latest trends in industrial automation including AI integration, IoT connectivity, and smart manufacturing solutions that are transforming industries across Africa and the Middle East.",
+                  content: "The industrial automation landscape is rapidly evolving with new technologies emerging every year. In 2024, we're seeing unprecedented growth in AI-powered systems, IoT integration, and smart manufacturing solutions...", 
+                  date: "04 octobre, 2025",
+                  image: "/news/gtis-grain-milling-expo-casablanca.jpg",
+                  category: "Events",
+                  author: "Dr. Ahmed Hassan",
+                  authorRole: "Chief Technology Officer",
+                  publishDate: "04 Octobre, 2025",
                 },
-                {
-                  title: "New Automation Technology Implemented",
-                  date: "April 28, 2025",
-                  excerpt:
-                    "GTIS introduces cutting-edge automation technology to improve efficiency in industrial operations.",
-                },
-                {
-                  title: "GTIS Expands Services to New Region",
-                  date: "April 15, 2025",
-                  excerpt:
-                    "We're excited to announce our expansion into a new region, bringing our industrial solutions to more clients.",
-                },
-                   {
-                  title: "GTIS Expands Services to New Region",
-                  date: "April 15, 2025",
-                  excerpt:
-                    "We're excited to announce our expansion into a new region, bringing our industrial solutions to more clients.",
-                },
-              ].map((news, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden h-[520px]">
-                  <div className="relative h-72">
-                    <Image src={`/news-${index + 1}.jpeg`} alt={news.title} fill className="object-cover" />
-                  </div>
-                  <div className="p-6">
-                    <p className="text-sm text-primary mb-2">{news.date}</p>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-1">{news.title}</h3>
-                    <p className="text-gray-600 mb-4 line-clamp-2">{news.excerpt}</p>
-                    <Link href="#" className="inline-flex items-center text-primary hover:text-secondary transition-all ease-in-out">
-                      Read more
-                      <ArrowRight className="ml-2" size={16} />
-                    </Link>
+               
+              ].map((article) => (
+              <div
+                key={article.id}
+                className="bg-white rounded-2xl shadow-lg border border-gray-200/50 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group"
+              >
+              
+                {/* Article Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={article.image || "/placeholder.svg"}
+                    alt={article.title}
+                    fill
+                    className="object-cover object-top  transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+
+                
+
+                  <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                    <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm font-medium">
+                      {article.category}
+                    </div>
+                   
                   </div>
                 </div>
-              ))}
-            </div>
+
+                {/* Article Content */}
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 hover:text-gray-700 transition-colors line-clamp-2">
+                    {article.title}
+                  </h3>
+
+                  <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">{article.excerpt}</p>
+
+                  {/* Author & Stats */}
+                  <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+                    <div className="flex items-center">
+                      {/* <User className="h-4 w-4 mr-2" /> */}
+                      <span>{article.author}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      {article.publishDate}
+                    </div>
+                  </div>
+
+                  <Link href={`/news/${article.slug}`}>
+                    <Button className="w-full bg-primary hover:bg-gray-900 text-white rounded-xl group-hover:bg-red-600 transition-colors">
+                      Read Trending Article
+                      <TrendingUp className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
 
             <div className="text-center mt-12">
-              
+              <Link href="/news">
                <Button
               variant="outline"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg rounded-full transition-all duration-300 bg-transparent"
             >
               View All News
             </Button>
+            </Link>
             </div>
           </div>
+          
         </section>
 
         {/* CTA Section */}

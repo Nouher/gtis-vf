@@ -138,13 +138,13 @@ const [scrollPos, setScrollPos] = useState(0);
                     <MailIcon size={16} className=""/>
                     <span className="">CONTACT@GTIS.MA</span>
                   </Link>
-                <div className="text-md flex gap-3">
+                {/* <div className="text-md flex gap-3">
                   <span className="border-b-2 border-b-secondary hover:scale-105 transition cursor-pointer text-secondary" onClick={()=>{setLanguage("en")}}>EN</span>
                   <span>/</span>
                   <span className=" border-b-2 border-b-transparent hover:border-b-secondary hover:scale-105 transition cursor-pointer hover:text-secondary" onClick={()=>{setLanguage("fr")}}>FR</span>
                   <span>/</span>
                   <span className="border-b-2 border-b-transparent hover:border-b-secondary hover:scale-105 transition cursor-pointer hover:text-secondary" onClick={()=>{setLanguage("es")}}>ES</span>
-                </div>
+                </div> */}
                 </div>
               </div>
                 
@@ -223,7 +223,7 @@ const [scrollPos, setScrollPos] = useState(0);
             </li>
         </ul>
 
-        <QuoteDialog />
+        {/* <QuoteDialog /> */}
         
         <div className="lg:hidden flex z-30">
             <MobileNav />
