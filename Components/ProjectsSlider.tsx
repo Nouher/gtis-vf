@@ -127,17 +127,17 @@ Built with precision and engineered for strength, our steel structures ensure du
     pauseOnHover: true
   };
   return (
-    <div className="slider-container px-28">
+    <div className="slider-container px-28 not-lg:px-2">
 
          <div className="text-center mb-16">
           {/* <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-[#0E6FB7] rounded-full text-sm font-medium mb-4">
             <Factory className="h-4 w-4 mr-2" />
             Industrial Excellence
           </div> */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#1D1E7A] via-[#0E6FB7] to-[#1D1E7A] bg-clip-text text-transparent">
+          <h2 className="text-3xl not-lg:w-full md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#1D1E7A] via-[#0E6FB7] to-[#1D1E7A] bg-clip-text text-transparent">
             Our Industrial Capabilities
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto not-lg:text-sm">
             Discover our comprehensive range of industrial services designed to transform your operations with
             cutting-edge technology and unmatched expertise.
           </p>

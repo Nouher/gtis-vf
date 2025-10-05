@@ -22,7 +22,58 @@ export const metadata: Metadata = {
     default:"GTIS – Global Technical Industry Services",
     template:"%s | GTIS – Global Technical Industry Services",
   },
-  description: "Conception et réalisation complètes d'usines agroalimentaires pour répondre à vos besoins industriels. Innovation, Qualité, Efficacité. Contactez nous ...",
+  description: "Experts in the design and construction of food processing plants. We deliver turnkey agro-industrial solutions combining innovation, quality, and efficiency. Contact us to build your next factory project.",
+      keywords: [
+      "food processing plant design",
+      "turnkey agro-industrial solutions",
+      "food factory construction",
+      "agro-industrial engineering",
+      "industrial plant design",
+      "food industry projects",
+      "food production line design",
+      "industrial automation for food plants",
+      "design and construction of food factories",
+      "turnkey food processing solutions",
+      "complete agro-food plant setup",
+      "industrial project management food sector",
+      "engineering services for food industry",
+      "custom food processing equipment design",
+      "factory layout and installation services",
+      "innovative food industry technologies",
+      "GTIS food processing",
+      "GTIS industrial engineering",
+      "GTIS turnkey food plant solutions",
+      "GTIS agro-industrial projects",
+    ],
+    openGraph: {
+      title:
+        {
+          default:"GTIS – Global Technical Industry Services",
+          template:"%s | GTIS – Global Technical Industry Services",
+        },
+      description:
+        "Experts in the design and construction of food processing plants. We deliver turnkey agro-industrial solutions combining innovation, quality, and efficiency. Contact us to build your next factory project.",
+      url: "gtis.ma",
+      siteName: "GTIS",
+      images: [
+        {
+          url: "https://gtis.ma/og-image.jpg", // 🔄 replace with your actual image path
+          width: 1200,
+          height: 630,
+          alt: "GTIS Food Processing Plant Design",
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        "GTIS | Turnkey Food Processing Plant Design & Agro-Industrial Solutions",
+      description:
+        "GTIS designs and builds food processing plants with innovation, quality, and efficiency.",
+      images: ["https://gtis.ma/og-image.jpg"], // 🔄 replace if needed
+    },
 };
 
 

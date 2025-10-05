@@ -72,17 +72,17 @@ export default function Home() {
           </div>
           <div className="h-full absolute top-0 w-full ">
             <div className=" bg-[#1128479d] w-full px-0 lg:px-20 flex flex-col  h-full absolute top-0">
-              <div className="h-72 text-white text-2xl font-bold lg:max-w-6xl mt-42 lg:mt-50  pb-10 ">
-                <h1 ref={textRef} className="lg:py-10 font-black text-4xl lg:text-8xl uppercase" id="title-home">{t("home.title")}</h1>
-                <div ref={descRef} className="text-lg lg:text-3xl font-normal lg:font-medium mt-6 lg:mt-0 h-30 ">{t("home.subtitle")}</div>
+              <div className="h-72 text-white text-2xl font-bold lg:max-w-6xl mt-30 lg:mt-50  pb-10  ">
+                <h1 ref={textRef} className="lg:py-10 font-black text-[40px] lg:text-8xl uppercase not-lg:text-center  not-lg:leading-snug not-lg:px-3" id="title-home">{t("home.title")}</h1>
+                <div ref={descRef} className="text-lg lg:text-3xl font-normal lg:font-medium mt-10 lg:mt-0 h-30 not-lg:text-center not-lg:leading-relaxed not-lg:px-2">{t("home.subtitle")}</div>
               </div>
-              <div ref={buttonsRef} className="flex gap-4 mt-20 lg:mt-48 ">
+              <div ref={buttonsRef} className="flex gap-4 mt-44 lg:mt-48 not-lg:justify-center">
                 <button className="text-white  bg-primary/60 hover:bg-primary w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold"><Link href="/contact">Contact us</Link></button>
                 <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><Link href="/services"><ArrowRight size={35} className="text-primary"/></Link></button>
               </div>
             </div>
           </div>
-          <div className="absolute bottom-0 right-0 h-auto flex flex-col items-center gap-6 p-8 rounded-lg">
+          <div className="absolute bottom-0 right-0 h-auto flex flex-col  items-center gap-6 p-8 rounded-lg not-lg:flex-row not-lg:w-full not-lg:justify-center">
             <a href="https://www.linkedin.com/company/global.technical.industry.services"><Image src="/social-media-icons/icon-linkedin-white.svg" alt="LinkedIn" width={24} height={24} className=""/></a>
             <a href="ttps://web.facebook.com/p/gtisma-100046893433733/?_rdc=1&_rdr#"><Image src="/social-media-icons/icon-facebook-white.svg" alt="Facebook" width={24} height={24} className=""/></a>
             <a href="https://www.instagram.com/gtis.ma/"><Image src="/social-media-icons/icon-instagram-white.svg" alt="Instagram" width={24} height={24} className=""/></a>

@@ -107,16 +107,15 @@ const [scrollPos, setScrollPos] = useState(0);
   }, [scrollPos]);
 
     return (
-      <div className={`bg-transparent w-full fixed z-50 hover:backdrop-blur-md bg-gradient-to-r  from-white/80 via-white/0 to-white/0 hover:bg-white hover:text-gray-700 transition-all duration-150 ease-in-out group ${visible ? "translate-y-0" : "-translate-y-full"}
+      <div className={`bg-transparent w-full fixed z-50 not-lg:backdrop-blur-md bg-gradient-to-r  from-white/80 via-white/0 to-white/0 hover:bg-white hover:text-gray-700 transition-all duration-150 ease-in-out group ${visible ? "translate-y-0" : "-translate-y-full"}
         ${bgWhite ? "bg-white border-b-1 shadow-sm" : "bg-transparent text-white"}`}>
-          <div className="flex w-full justify-between items-center pl-6">
-              <div className="flex justify-start items-center w-32 lg:w-auto h-23 z-50  ">
-          <Link href="/" >
-              <Image src={logo} alt="gtis-logo" width={400} className="relative top-0 left-0"/>
-          </Link>
-        </div>
+        <div className="flex w-full justify-between items-center pl-2 lg:pl-10 not-lg:h-20">
+              <div className="flex justify-start items-center w-32 lg:w-auto h-23 z-50 not-lg:w-80 ">
+                <Link href="/" >
+                    <Image src={logo} alt="gtis-logo" width={400} className="relative top-0 left-0 "/>
+                </Link>
+              </div>
         <div className="flex flex-col w-full">
-
           <div className=''>
             <div className="bg-transparent  px-20 w-full items-center justify-between hidden lg:flex">
               <div className=" flex flex-row-reverse items-center justify-between w-full h-10">
@@ -149,7 +148,7 @@ const [scrollPos, setScrollPos] = useState(0);
               </div>
                 
             </div>
-            <div className="h-[1px] w-full bg-gradient-to-r  from-white/0 via-white/0 to-white/80 group-hover:to-gray-400"/>
+            <div className="h-[1px] w-full bg-gradient-to-r  from-white/0 via-white/0 to-white/80 group-hover:to-gray-400 hidden  lg:block"/>
             </div>
 
             
@@ -225,7 +224,7 @@ const [scrollPos, setScrollPos] = useState(0);
 
         {/* <QuoteDialog /> */}
         
-        <div className="lg:hidden flex z-30">
+        <div className={`lg:hidden flex z-30 absolute top-4.5 right-2 text-primary ${bgWhite ? "" : "text-white"}`}>
             <MobileNav />
         </div>
 

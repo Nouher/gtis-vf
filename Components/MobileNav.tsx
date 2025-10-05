@@ -12,48 +12,48 @@ export function MobileNav() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" className="lg:hidden p-0 w-10 h-10 bg-white/70">
-          <Menu className="h-8 w-8" />
+        <button className="lg:hidden h-10 w-10 bg-primary/0">
+          <Menu className="h-10 w-10 " />
           <span className="sr-only">Toggle menu</span>
-        </Button>
+        </button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-full bg-blue-50/90 px-8">
-        <nav className="flex flex-col gap-4 mt-8">
-          <Link href="/" onClick={() => setOpen(false)} className="text-lg font-medium border-b border-gray-200 pb-2">
+      <SheetContent side="right" className="w-full bg-white/10 text-white px-8 backdrop-blur-md pt-24">
+        <nav className="flex flex-col justify-center items-start gap-6 mt-8 pl-">
+          <Link href="/" onClick={() => setOpen(false)} className="text-2xl font-medium  pb-2">
             HOME
           </Link>
           <Link
             href="/services"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium border-b border-gray-200 pb-2"
+            className="text-2xl font-medium  pb-2"
           >
             SERVICES
           </Link>
           <Link
             href="/projects"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium border-b border-gray-200 pb-2"
+            className="text-2xl font-medium  pb-2"
           >
             PROJECTS
           </Link>
           <Link
             href="/sectors-of-activity"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium border-b border-gray-200 pb-2"
+            className="text-2xl font-medium  pb-2"
           >
             SECTORS OF ACTIVITY
           </Link>
           <Link
             href="/news"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium border-b border-gray-200 pb-2"
+            className="text-2xl font-medium  pb-2"
           >
             NEWS
           </Link>
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium border-b border-gray-200 pb-2"
+            className="text-2xl font-medium  pb-2"
           >
             CONTACT
           </Link>
