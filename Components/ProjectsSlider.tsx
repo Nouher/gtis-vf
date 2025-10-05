@@ -124,7 +124,18 @@ Built with precision and engineered for strength, our steel structures ensure du
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    pauseOnHover: true
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024, // tablets and smaller laptops
+        settings: {
+          dots: false,
+          slidesToShow: 1,
+          pauseOnHover: true,
+        },
+      },
+      
+    ],
   };
   return (
     <div className="slider-container px-28 not-lg:px-2">
@@ -148,7 +159,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                    <div
                      onClick={()=>handleNavigate(service.title)}
                      key={service.id}
-                     className="h-[520px] my-4 group relative overflow-hidden cursor-pointer rounded-2xl bg-white shadow-md transition-all duration-500 transform hover:-translate-y-2"
+                     className="h-[520px] my-4 group relative overflow-hidden cursor-pointer rounded-2xl bg-white shadow-md transition-all duration-500 transform hover:-translate-y-2 "
                      // onMouseEnter={() => setHoveredItem(service.id)}
                      // onMouseLeave={() => setHoveredItem(null)}
                    >
