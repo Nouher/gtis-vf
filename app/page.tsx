@@ -10,6 +10,7 @@ import { useLanguage } from "./context/language-context";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import ProjectsSlider from "@/Components/ProjectsSlider";
+import ContactGroup from "@/Components/ContactGroup";
 
 export default function Home() {
 
@@ -98,6 +99,7 @@ export default function Home() {
         <PowerfulStats/>
         {/* <IndustrialShowcase/> */}
         <ProjectsSlider/>
+        <ContactGroup/>
  
         {/* Services Section */}
         {/* <section id="services" className="py-24 bg-gray-50">
