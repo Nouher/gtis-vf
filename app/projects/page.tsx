@@ -24,10 +24,10 @@ import {
   HardHat,
   Ship,
 } from "lucide-react"
-import { Button } from "@/Components/ui/button"
-import { Input } from "@/Components/ui/input"
-import { Badge } from "@/Components/ui/badge"
-import { Select, SelectContent, SelectItem, SelectTrigger } from "@/Components/ui/select"
+import { Button } from "../components/ui/button"
+import { Input } from "../components/ui/input"
+import { Badge } from "../components/ui/badge"
+import { Select, SelectContent, SelectItem, SelectTrigger } from "../components/ui/select"
 import { projects } from "../data/projects"
 
 

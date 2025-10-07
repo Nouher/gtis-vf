@@ -1,11 +1,11 @@
-import { Button } from "@/Components/ui/button"
+import { Button } from "./ui/button"
 import {
   Dialog,
   DialogClose,
   DialogContent,
   DialogFooter,
   DialogTrigger,
-} from "@/Components/ui/dialog"
+} from "./ui/dialog"
 import { Building, FileText, Mail, MessageSquare, Phone, Send, User } from "lucide-react"
 import { useState } from "react"
 

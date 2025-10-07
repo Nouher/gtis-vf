@@ -20,9 +20,9 @@ import {
   Clock,
   Building,
 } from "lucide-react"
-import { Button } from "@/Components/ui/button"
-import { Badge } from "@/Components/ui/badge"
-import ProjectCarousel from "../../../Components/ProjectCarousel"
+import { Button } from "../../components/ui/button"
+import { Badge } from "../../components/ui/badge"
+import ProjectCarousel from "../../components/ProjectCarousel"
 import { getProjectBySlug, getRelatedProjects } from "../../data/projects"
 import { Project } from "../../data/projects"
 

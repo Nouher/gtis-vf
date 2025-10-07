@@ -1,6 +1,7 @@
 // components/HeroSlider.tsx
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface Slide {
   image: string;
@@ -33,7 +34,7 @@ export default function HeroSlider() {
           exit={{ opacity: 0 }}
           className="absolute w-full h-full"
         >
-          <img
+          <Image
             src={slides[current].image}
             alt={slides[current].title}
             className="w-full h-full object-cover"

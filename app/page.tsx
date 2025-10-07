@@ -3,14 +3,13 @@ import Image from "next/image";
 import { ArrowRight, Award, Calendar, Mail, Phone, Shield, TrendingUp } from "lucide-react";
 // import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
-import PowerfulStats from "@/Components/PowerfulStats";
-import { Button } from "@/Components/ui/button";
+import PowerfulStats from "./components/PowerfulStats";
+import { Button } from "./components/ui/button";
 // import { motion } from "framer-motion";
 import { useLanguage } from "./context/language-context";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-import ProjectsSlider from "@/Components/ProjectsSlider";
-import ContactGroup from "@/Components/ContactGroup";
+import ProjectsSlider from "./components/ProjectsSlider";
 
 export default function Home() {
 
@@ -99,7 +98,6 @@ export default function Home() {
         <PowerfulStats/>
         {/* <IndustrialShowcase/> */}
         <ProjectsSlider/>
-        <ContactGroup/>
  
         {/* Services Section */}
         {/* <section id="services" className="py-24 bg-gray-50">

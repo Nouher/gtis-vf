@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
 import { Globe, Award, Users,Building2 } from "lucide-react"
-import { useLanguage } from "../app/context/language-context"
+import { useLanguage } from "../context/language-context"
 
 interface CounterProps {
   end: number

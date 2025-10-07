@@ -16,8 +16,10 @@ import {
   Phone,
   ChevronRight,
 } from "lucide-react"
-import { Button } from "@/Components/ui/button"
-import HeroSlider from "@/Components/HeroSlider"
+import { Button } from "../components/ui/button"
+import HeroSlider from "../components/HeroSlider"
+
+
 
 export default function NewsPage() {
   const [isLoaded, setIsLoaded] = useState(false)

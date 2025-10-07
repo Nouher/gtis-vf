@@ -21,7 +21,7 @@ import {
   Calendar,
   ArrowRight,
 } from "lucide-react"
-import { Button } from "@/Components/ui/button"
+import { Button } from "../../components/ui/button"
 
 export default function ServiceDetailPage() {
   const params = useParams()

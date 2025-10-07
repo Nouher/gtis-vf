@@ -31,7 +31,7 @@ seo: {
 
 
 
-export const articles: News = {
+export const articles: News[] = [{
 id: 1,
 slug: "gtis-grain-milling-expo-casablanca",
 title: "GTIS to Present Cutting-Edge Industrial Solutions at the Grain & Milling Expo Casablanca",
@@ -66,6 +66,6 @@ metaDescription: "GTIS Global Technical Industry Services will exhibit at the Gr
 keywords: ["GTIS", "Grain & Milling Expo Casablanca", "industrial innovation Morocco", "automation systems", "milling technology", "GTIS Morocco"],
 ogImage: "/images/news/gtis-grain-milling-expo.jpg",
 },
-}
+}]
 
 

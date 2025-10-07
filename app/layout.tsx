@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/Components/Navbar";
-import ContactGroup from "@/Components/ContactGroup";
-import Footer from "@/Components/Footer";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { Roboto_Condensed } from "next/font/google";
 import { LanguageProvider } from "./context/language-context"
 import 'slick-carousel/slick/slick.css';
@@ -92,7 +91,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Navbar/>
           
-          <ContactGroup/>
+          {/* <ContactGroup/> */}
           {/* <div className="mt-[132px]"> */}
           {children}
           {/* </div> */}

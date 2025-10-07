@@ -1,6 +1,6 @@
 import { sectors } from "../../data/SectorsData"
 import { notFound } from "next/navigation"
-import { Button } from "@/Components/ui/button"
+import { Button } from "../../components/ui/button"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -87,7 +87,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
 
             {/* Right image */}
             <div className="relative">
-              <img
+              <Image
                 src={
                   sector.heroImage 
                 }
@@ -139,7 +139,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
               </div>
             </div>
             <div className="relative">
-              <img
+              <Image
                 src={sector.keyAchievementsImage}
                 alt="Our achievements"
                 className="w-full h-[400px] object-cover rounded-lg"

@@ -19,7 +19,7 @@ import {
   Users,
   Calendar,
 } from "lucide-react"
-import { Button } from "@/Components/ui/button"
+import { Button } from "../components/ui/button"
 import { gsap } from "gsap"
 
 const slides = [
@@ -157,6 +157,9 @@ const animateNavLine = (index: number) => {
 
   // Intersection Observer for scroll animations
   useEffect(() => {
+
+      const currentCards = cardRefs.current.slice(); // copy current refs
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -172,12 +175,12 @@ const animateNavLine = (index: number) => {
       },
     )
 
-    cardRefs.current.forEach((ref) => {
+    currentCards.forEach((ref) => {
       if (ref) observer.observe(ref)
     })
 
     return () => {
-      cardRefs.current.forEach((ref) => {
+      currentCards.forEach((ref) => {
         if (ref) observer.unobserve(ref)
       })
     }

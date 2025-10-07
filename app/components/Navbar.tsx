@@ -1,12 +1,11 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/logo-v2.svg";
+import logo from "../../public/logo-v2.svg";
 import { MobileNav } from "./MobileNav";
-import { QuoteDialog } from "./QuoteDialog";
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, MailIcon, PhoneIcon } from "lucide-react";
-import { useLanguage } from "../app/context/language-context"
+import { MailIcon, PhoneIcon } from "lucide-react";
+import { useLanguage } from "../context/language-context"
 
 
 export const FacebookIcon = () => {
@@ -28,8 +27,7 @@ export const LinkedInIcon = () => {
 
 export default function Navbar() {
 
-  const { language, setLanguage, t } = useLanguage()
-
+  const {  setLanguage, t } = useLanguage()
 
 const [scrollPos, setScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -137,13 +135,14 @@ const [scrollPos, setScrollPos] = useState(0);
                     <MailIcon size={16} className=""/>
                     <span className="">CONTACT@GTIS.MA</span>
                   </Link>
-                {/* <div className="text-md flex gap-3">
+                  {/* hidden show it */}
+                <div className="text-md hidden gap-3 "> 
                   <span className="border-b-2 border-b-secondary hover:scale-105 transition cursor-pointer text-secondary" onClick={()=>{setLanguage("en")}}>EN</span>
                   <span>/</span>
                   <span className=" border-b-2 border-b-transparent hover:border-b-secondary hover:scale-105 transition cursor-pointer hover:text-secondary" onClick={()=>{setLanguage("fr")}}>FR</span>
                   <span>/</span>
                   <span className="border-b-2 border-b-transparent hover:border-b-secondary hover:scale-105 transition cursor-pointer hover:text-secondary" onClick={()=>{setLanguage("es")}}>ES</span>
-                </div> */}
+                </div>
                 </div>
               </div>
                 

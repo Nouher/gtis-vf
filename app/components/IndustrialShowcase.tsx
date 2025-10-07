@@ -1,8 +1,8 @@
 
 // import { useState } from "react"
 import Image from "next/image"
-import { Button } from "@/Components/ui/button"
-import { ArrowRight,  Factory } from "lucide-react"
+import { Button } from "./ui/button"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 

@@ -1,9 +1,8 @@
 import { ArrowRight } from "lucide-react";
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import Link from "next/link"
 import { useRouter } from "next/navigation"
 
 function ProjectsSlider() {
@@ -117,7 +116,7 @@ Built with precision and engineered for strength, our steel structures ensure du
     },
   ]
 
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     slidesToShow: 3,
@@ -138,8 +137,7 @@ Built with precision and engineered for strength, our steel structures ensure du
     ],
   };
   return (
-    <div className="slider-container px-28 not-lg:px-2">
-
+    <div className="slider-container px-28 not-lg:px-2 not-lg:overflow-hidden not-lg:w-full">
          <div className="text-center mb-16">
           {/* <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-[#0E6FB7] rounded-full text-sm font-medium mb-4">
             <Factory className="h-4 w-4 mr-2" />
@@ -168,7 +166,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                        <Image
                          src={service.image || "/placeholder.svg"}
                          alt={service.title}
-                         fill
+                         
                          className="object-cover transition-transform duration-700 group-hover:scale-110"
                        />
        
