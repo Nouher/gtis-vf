@@ -9,7 +9,6 @@ import { Button } from "./components/ui/button";
 import { useLanguage } from "./context/language-context";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-import ProjectsSlider from "./components/ProjectsSlider";
 import { Slider } from "./components/Slider";
 
 export default function Home() {
