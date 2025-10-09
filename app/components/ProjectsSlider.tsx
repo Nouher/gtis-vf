@@ -2,7 +2,6 @@ import { ArrowRight } from "lucide-react";
 import React from "react";
 import Slider from "react-slick";
 import { Button } from "./ui/button";
-import Image from "next/image";
 import { useRouter } from "next/navigation"
 
 function ProjectsSlider() {
