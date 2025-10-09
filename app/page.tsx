@@ -10,6 +10,7 @@ import { useLanguage } from "./context/language-context";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import ProjectsSlider from "./components/ProjectsSlider";
+import { Slider } from "./components/Slider";
 
 export default function Home() {
 
@@ -96,8 +97,9 @@ export default function Home() {
         <div className="h-1 bg-[#1D1E7A] w-full"/> 
 
         <PowerfulStats/>
-        {/* <IndustrialShowcase/> */}
-        <ProjectsSlider/>
+
+        <Slider/>
+        {/* <ProjectsSlider/> */}
  
         {/* Services Section */}
         {/* <section id="services" className="py-24 bg-gray-50">

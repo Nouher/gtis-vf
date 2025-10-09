@@ -1,11 +1,18 @@
-import { ArrowRight } from "lucide-react";
-import React from "react";
-import Slider from "react-slick";
-import { Button } from "./ui/button";
-import Image from "next/image";
+"use client"
+
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
+import { Button } from "./ui/button"
+import { ArrowRight } from "lucide-react"
 import { useRouter } from "next/navigation"
 
-function ProjectsSlider() {
+export function Slider() {
 
   const router = useRouter()
 
@@ -22,10 +29,7 @@ function ProjectsSlider() {
   router.push(`/services/${slug}`)
 }
 
-
-
-
-  const industrialServices = [
+const industrialServices = [
     {
       id: 1,
       slug:"Flat-Bottom",
@@ -116,29 +120,13 @@ Built with precision and engineered for strength, our steel structures ensure du
     },
   ]
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024, // tablets and smaller laptops
-        settings: {
-          dots: false,
-          slidesToShow: 1,
-          pauseOnHover: true,
-        },
-      },
-      
-    ],
-  };
+    const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+
   return (
-    <div className="slider-container px-28 not-lg:px-2 not-lg:overflow-hidden not-lg:w-full">
-         <div className="text-center mb-16">
+    <div className=" px-8 lg:px-36">
+           <div className="text-center">
           {/* <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-[#0E6FB7] rounded-full text-sm font-medium mb-4">
             <Factory className="h-4 w-4 mr-2" />
             Industrial Excellence
@@ -151,10 +139,19 @@ Built with precision and engineered for strength, our steel structures ensure du
             cutting-edge technology and unmatched expertise.
           </p>
         </div>
-        
-      <Slider {...settings} className="hidden" >
-        {industrialServices.map((service) => (
-                   <div
+        <Carousel
+        opts={{
+            align: "start",
+        }}
+        className="w-full py-10 md:py-16"
+        plugins={[plugin.current]}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+        >
+        <CarouselContent>
+            {industrialServices.map(( service) => (
+            <CarouselItem key={service.id} className="md:basis-1/2 lg:basis-1/3">
+                     <div
                      onClick={()=>handleNavigate(service.title)}
                      key={service.id}
                      className="h-[520px] my-4 group relative overflow-hidden cursor-pointer rounded-2xl bg-white shadow-md transition-all duration-500 transform hover:-translate-y-2 "
@@ -224,10 +221,13 @@ Built with precision and engineered for strength, our steel structures ensure du
                      {/* Hover Effect Border */}
                      <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#1D1E7A]/30 rounded-2xl transition-all duration-300"></div>
                    </div>
-                 ))}
-      </Slider>
+                    
+            </CarouselItem>
+            ))}
+        </CarouselContent>
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
+        </Carousel>
     </div>
-  );
+  )
 }
-
-export default ProjectsSlider;
