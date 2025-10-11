@@ -106,8 +106,8 @@ const [scrollPos, setScrollPos] = useState(0);
 
     return (
       <div className={`bg-transparent w-full fixed z-50 not-lg:backdrop-blur-md bg-gradient-to-r  from-white/80 via-white/0 to-white/0 hover:bg-white hover:text-gray-700 transition-all duration-150 ease-in-out group ${visible ? "translate-y-0" : "-translate-y-full"}
-        ${bgWhite ? "bg-white border-b-1 shadow-sm" : "bg-transparent text-white"}`}>
-        <div className="flex w-full justify-between items-center pl-2 lg:pl-10 not-lg:h-20">
+        ${bgWhite ? "bg-white shadow-sm" : "bg-transparent text-white"} `}>
+        <div className={`flex w-full justify-between items-center pl-2 lg:pl-10 not-lg:h-20 hover:backdrop-blur-md hover:bg-gradient-to-r hover:from-white/80 hover:via-primary/30 hover:to-secondary/20  ${bgWhite ? "bg-gradient-to-r from-white/80 via-primary/30 to-secondary/20 text-gray-700" : ""}` }>
               <div className="flex justify-start items-center w-32 lg:w-auto h-23 z-50 not-lg:w-80 ">
                 <Link href="/" >
                     <Image src={logo} alt="gtis-logo" width={400} className="relative top-0 left-0 "/>

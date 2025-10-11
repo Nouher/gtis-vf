@@ -10,8 +10,8 @@ interface Slide {
 
 const slides: Slide[] = [
   { image: "/bg-projects.jpeg", title: "Stay Ahead with the Latest Industry Trends" },
-  { image: "/bg-projects.jpeg", title: "Discover Innovations Shaping the Future" },
-  { image: "/bg-projects.jpeg", title: "Expert Insights & Breaking News Daily" },
+  { image: "/services-bg.jpeg", title: "Discover Innovations Shaping the Future" },
+  { image: "/services-bg2.jpeg", title: "Expert Insights & Breaking News Daily" },
 ];
 
 export default function HeroSlider() {
@@ -25,7 +25,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <div className="relative w-full h-[60vh] overflow-hidden">
+    <div className="relative w-full h-[60vh] overflow-hidden ">
       <AnimatePresence>
         <motion.div
           key={current}
@@ -37,9 +37,10 @@ export default function HeroSlider() {
           <Image
             src={slides[current].image}
             alt={slides[current].title}
-            className="w-full h-full object-cover"
+            fill
+            className="w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-primary/80 to-blue-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/60 via-primary/60 to-secondary/60" />
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
             <motion.h1
               key={slides[current].title}
@@ -47,7 +48,7 @@ export default function HeroSlider() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-white text-4xl md:text-7xl font-bold text-center px-4"
+              className="text-secondary drop-shadow-2xl text-4xl md:text-6xl font-bold text-center px-4 mt-10"
             >
               {slides[current].title}
             </motion.h1>

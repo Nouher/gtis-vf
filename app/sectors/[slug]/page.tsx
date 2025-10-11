@@ -42,7 +42,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
   return (
     <main className="">
     <div className=" ">
-         <section className="relative h-screen flex items-end pb-16 justify-center overflow-hidden">
+         <section className="relative h-screen flex items-end pb-16 justify-center overflow-hidden ">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <Image
@@ -87,7 +87,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
 
             {/* Right image */}
             <div className="relative">
-              <Image
+              <img
                 src={
                   sector.heroImage 
                 }
@@ -139,7 +139,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
               </div>
             </div>
             <div className="relative">
-              <Image
+              <img
                 src={sector.keyAchievementsImage}
                 alt="Our achievements"
                 className="w-full h-[400px] object-cover rounded-lg"

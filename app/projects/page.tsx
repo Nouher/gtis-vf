@@ -161,7 +161,7 @@ export default function ProjectsPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-800/80 to-gray-700/70" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-secondary/40 via-gray-700/70 to-gray-800/80" />
         </div>
 
         {/* Content */}
@@ -459,7 +459,7 @@ export default function ProjectsPage() {
                 isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
             >
-              <Badge className="bg-primary/10 text-primary px-4 py-2 text-sm font-medium mb-4">
+              <Badge className="bg-secondary/20 text-primary px-4 py-2 text-sm font-medium mb-4">
                 Excellence Guaranteed
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -493,7 +493,7 @@ export default function ProjectsPage() {
               ].map((benefit, index) => (
                 <div
                   key={index}
-                  className={`text-center p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-500 hover:scale-105 transform ${
+                  className={`text-center p-8 rounded-2xl bg-secondary/15 hover:bg-white hover:shadow-xl transition-all duration-500 hover:scale-105 transform ${
                     isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                   }`}
                   style={{ transitionDelay: `${500 + index * 200}ms` }}

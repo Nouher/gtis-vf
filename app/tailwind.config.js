@@ -2,8 +2,11 @@ module.exports = {
   theme: {
     extend: {
        colors: {
-        primary: "#1D1E7A",    // <- your primary
-        secondary: "#F59E0B",  // <- recommended secondary
+        primary: {
+          DEFAULT: "#1D1E7A", // main brand color
+          },    // <- your primary
+          secondary: "#F59E0B",  // <- recommended secondary
+          tertiary: "#75FA87",  // <- lighter primary
       },
       keyframes: {
         zoomInOut: {

@@ -125,13 +125,13 @@ Built with precision and engineered for strength, our steel structures ensure du
   )
 
   return (
-    <div className=" px-8 lg:px-36">
+    <div className=" px-8 lg:px-36 mt-16 not-lg:mb-10">
            <div className="text-center">
           {/* <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-[#0E6FB7] rounded-full text-sm font-medium mb-4">
             <Factory className="h-4 w-4 mr-2" />
             Industrial Excellence
           </div> */}
-          <h2 className="text-3xl not-lg:w-full md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#1D1E7A] via-[#0E6FB7] to-[#1D1E7A] bg-clip-text text-transparent">
+          <h2 className="text-3xl not-lg:w-full md:text-6xl font-bold mb-6 bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">
             Our Industrial Capabilities
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto not-lg:text-sm">
@@ -190,7 +190,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                        <div className="mb-2">
                          <span className="text-sm text-gray-500 font-medium">{service.subtitle}</span>
                        </div>
-                       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1D1E7A] transition-colors">
+                       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-secondary ease-in-out transition-colors">
                          {service.title}
                        </h3>
                        <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">{service.description}</p>
@@ -219,7 +219,7 @@ Built with precision and engineered for strength, our steel structures ensure du
                      </div>
        
                      {/* Hover Effect Border */}
-                     <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#1D1E7A]/30 rounded-2xl transition-all duration-300"></div>
+                     <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/30 rounded-2xl transition-all duration-300"></div>
                    </div>
                     
             </CarouselItem>

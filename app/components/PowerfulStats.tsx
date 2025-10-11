@@ -55,28 +55,28 @@ export default function PowerfulStats() {
 
   const stats = [
     {
-      icon: <Building2 className="h-16 w-16 text-[#1D1E7A]" />,
+      icon: <Building2 className="h-16 w-16 text-primary" />,
       number: 50,
       suffix: "+",
       title: t("stats.projects"),
       description: t("stats.projects.desc"),
     },
     {
-      icon: <Globe className="h-16 w-16 text-[#1D1E7A]" />,
+      icon: <Globe className="h-16 w-16 text-primary" />,
       number: 10,
       suffix: "+",
       title: t("stats.countries"),
       description: t("stats.countries.desc"),
     },
     {
-      icon: <Award className="h-16 w-16 text-[#1D1E7A]" />,
+      icon: <Award className="h-16 w-16 text-primary" />,
       number: 8,
       suffix: "+",
       title: t("stats.years"),
       description: t("stats.years.desc"),
     },
     {
-      icon: <Users className="h-16 w-16 text-[#1D1E7A]" />,
+      icon: <Users className="h-16 w-16 text-primary" />,
       number: 150,
       suffix: "+",
       title: t("stats.professionals"),
@@ -104,7 +104,7 @@ export default function PowerfulStats() {
 
               {/* Number */}
               <div className="mb-2">
-                <span className="text-4xl md:text-5xl font-bold text-gray-900">
+                <span className="text-4xl md:text-5xl font-bold text-primary">
                   <Counter end={stat.number} suffix={stat.suffix} duration={2000} />
                 </span>
                 <span className="text-2xl md:text-3xl font-bold text-gray-900 ml-1">{stat.title}</span>

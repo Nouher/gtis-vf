@@ -39,7 +39,7 @@ const slides = [
     miniTitle: "GLOBAL REACH",
     title: "Worldwide Solutions Tailored for Your Needs",
     buttonText: "GET STARTED",
-    image: "/services-slider/services-slider3.jpeg",
+    image: "/services-slider/services-slider3.png",
   },
 ];
 
@@ -357,17 +357,17 @@ const animateNavLine = (index: number) => {
       {/* Hero Section */}
               <section
         ref={heroRef}
-        className="relative w-full h-screen flex flex-col justify-center px-6 sm:px-12 md:px-32 lg:px-48 bg-cover bg-center text-white"
+        className="relative w-full h-screen flex flex-col justify-center px-6 sm:px-12 md:px-32 lg:px-48 bg-cover bg-center text-white "
         style={{
           backgroundImage: `linear-gradient(to bottom, #1128479d, #1128479d), url(${slides[current].image})`
         }}
       >
-        <div className="relative max-w-4xl">
+        <div className="relative max-w-6xl">
           <span ref={miniLineRef}></span>
           <span ref={miniRef} className="text-sm sm:text-base lg:text-2xl uppercase tracking-widest text-white">
             {slides[current].miniTitle}
           </span>
-          <h1 ref={titleRef} className="text-3xl sm:text-5xl lg:text-8xl font-extrabold mb-4 leading-tight mt-4">
+          <h1 ref={titleRef} className="text-3xl sm:text-5xl lg:text-7xl uppercase font-extrabold mb-4 leading-tight mt-4">
             {slides[current].title}
           </h1>
           <button ref={btnRef} className="relative group inline-flex items-center font-semibold text-xl text-white mt-4">

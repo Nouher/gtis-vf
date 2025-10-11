@@ -50,9 +50,10 @@
 }
 
 :root {
-  --primary: #1D1E7A;  /* Navy Blue */
+  --primary: #1D1E7A; 
+  --primaryy:#75FA87 /* Navy Blue */
   --primary-foreground: #FFFFFF; /* White text on primary */
-  --secondary: #F59E0B;  /* Amber secondary */
+  --secondary: #75FA87;  /* Amber secondary */
   --secondary-foreground: #1D1E7A; /* Navy text on amber */
   --radius: 0.625rem;
   --card: oklch(1 0 0);

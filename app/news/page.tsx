@@ -39,15 +39,59 @@ export default function NewsPage() {
       content: "The industrial automation landscape is rapidly evolving with new technologies emerging every year. In 2024, we're seeing unprecedented growth in AI-powered systems, IoT integration, and smart manufacturing solutions...",
       image: "/news/gtis-grain-milling-expo-casablanca.jpg",
       category: "technology",
-      author: "Dr. Ahmed Hassan",
+      author: "Gtis Editorial Team",
       authorRole: "Chief Technology Officer",
-      publishDate: "2024-01-15",
+      publishDate: "2025-10-04",
       readTime: "8 min read",
       views: 2450,
       featured: true,
       trending: true,
       tags: ["Automation", "AI", "IoT", "Manufacturing"],
     },
+    {
+  id: 2,
+  slug: "dawajine-2025-el-jadida",
+  title: "GTIS to Participate in Dawajine 2025 – Showcasing Innovation at the 26th International Poultry Exhibition in El Jadida",
+  subtitle: "Driving innovation and sustainability in the poultry industry",
+  excerpt:
+    "GTIS announces its participation in Dawajine 2025, the 26th International Poultry Exhibition, taking place from November 3 to 5, 2025, at the Mohammed VI Exhibition Center in El Jadida. The company will present its latest smart technologies and innovative solutions for the poultry sector.",
+  content:
+    "GTIS is proud to announce its participation in Dawajine 2025, one of Africa’s leading poultry industry exhibitions, organized by the Moroccan Interprofessional Federation of the Poultry Sector (FISA). Held from November 3 to 5, 2025, at the Mohammed VI Exhibition Center in El Jadida, this 26th edition will highlight innovation and sustainability as the main challenges facing the poultry industry.\n\nWith more than 450 exhibitors and brands from Morocco and abroad, Dawajine 2025 offers an exceptional platform for professionals to explore the latest technologies, equipment, and solutions driving the future of poultry production. GTIS will present its range of smart automation and industrial solutions designed to improve efficiency, biosecurity, and sustainable growth within the sector.\n\nAs part of its ongoing commitment to technological advancement in agribusiness, GTIS aims to strengthen collaborations and partnerships across the North and West African markets through this international event.",
+  image: "/news/dawajine-2025-el-jadida.jpg",
+  category: "events",
+  author: "Samablue Editorial Team",
+  authorRole: "Communication Department",
+  publishDate: "2025-10-10",
+  readTime: "4 min read",
+  views: 0,
+  featured: true,
+  trending: true,
+  tags: [
+    "GTIS",
+    "Dawajine 2025",
+    "Poultry Industry",
+    "Innovation",
+    "Sustainability",
+    "El Jadida",
+    "FISA",
+  ],
+  seo: {
+    metaTitle:
+      "GTIS to Participate in Dawajine 2025 – Showcasing Innovation at the 26th International Poultry Exhibition in El Jadida",
+    metaDescription:
+      "GTIS joins Dawajine 2025, the 26th International Poultry Exhibition in El Jadida, Morocco, to present innovative technologies and sustainable solutions for the poultry industry.",
+    keywords: [
+      "GTIS Dawajine 2025",
+      "Poultry Exhibition Morocco",
+      "FISA Morocco",
+      "Agritech Innovation",
+      "Sustainable Poultry Solutions",
+      "El Jadida Events",
+      "Industrial Automation",
+    ],
+    ogImage: "/news/gtis-dawajine-2025-og.jpg",
+  },
+}
     
     
   ]
@@ -85,7 +129,7 @@ export default function NewsPage() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center px-4 py-2 bg-primary/90 text-secondary rounded-full text-sm font-medium mb-4">
                 <TrendingUp className="h-4 w-4 mr-2" />
                 Trending Now
               </div>
@@ -147,7 +191,7 @@ export default function NewsPage() {
                   </div>
 
                   <Link href={`/news/${article.slug}`}>
-                    <Button className="w-full bg-gray-800 hover:bg-gray-900 text-white rounded-xl group-hover:bg-red-600 transition-colors">
+                    <Button className="w-full bg-gray-800 hover:bg-gray-900 text-white rounded-xl group-hover:bg-primary group-hover:text-secondary transition-colors">
                       Read Trending Article
                       <TrendingUp className="ml-2 h-4 w-4" />
                     </Button>

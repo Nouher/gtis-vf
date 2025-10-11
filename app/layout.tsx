@@ -6,6 +6,8 @@ import { Roboto_Condensed } from "next/font/google";
 import { LanguageProvider } from "./context/language-context"
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Suspense } from "react";
+import PreLoading from "./components/PreLoading";
 
 
 const robotoCondensed = Roboto_Condensed({
@@ -81,6 +83,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
 
   
   return (
@@ -88,14 +91,14 @@ export default function RootLayout({
       <body
         className={`${robotoCondensed.className} antialiased`}
       >
-        <LanguageProvider>
+        <LanguageProvider >
+          <Suspense fallback={<PreLoading />}>
+            
           <Navbar/>
           
-          {/* <ContactGroup/> */}
-          {/* <div className="mt-[132px]"> */}
           {children}
-          {/* </div> */}
           <Footer/>
+          </Suspense>
         </LanguageProvider>
       </body>
     </html>

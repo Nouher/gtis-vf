@@ -68,17 +68,18 @@ export default function Home() {
             loop
             muted
             playsInline />
-
+            {/* <div className="absolute inset-0 bg-gradient-to-bl from-secondary/90 via-gray-800/80 to-secondary/70" /> */}
           </div>
           <div className="h-full absolute top-0 w-full ">
-            <div className=" bg-[#1128479d] w-full px-0 lg:px-20 flex flex-col  h-full absolute top-0">
+            <div className=" bg-[#1128479d] bg-gradient-to-bl from-secondary/40 via-primary/20 to-secondary/30 w-full px-0 lg:px-20 flex flex-col  h-full absolute top-0">
+              
               <div className="h-72 text-white text-2xl font-bold lg:max-w-6xl mt-30 lg:mt-50  pb-10  ">
                 <h1 ref={textRef} className="lg:py-10 font-black text-[40px] lg:text-8xl uppercase not-lg:text-center  not-lg:leading-snug not-lg:px-3" id="title-home">{t("home.title")}</h1>
                 <div ref={descRef} className="text-lg lg:text-3xl font-normal lg:font-medium mt-10 lg:mt-0 h-30 not-lg:text-center not-lg:leading-relaxed not-lg:px-2">{t("home.subtitle")}</div>
               </div>
               <div ref={buttonsRef} className="flex gap-4 mt-44 lg:mt-48 not-lg:justify-center">
-                <button className="text-white  bg-primary/60 hover:bg-primary w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold"><Link href="/contact">Contact us</Link></button>
-                <button className="h-16 w-16 bg-white rounded-full flex justify-center items-center"><Link href="/services"><ArrowRight size={35} className="text-primary"/></Link></button>
+                <button className="text-white hover:text-secondary transition-all ease-in-out hover:scale-105 bg-primary/60 hover:bg-primary w-52 lg:w-2xs h-14 lg:h-16 rounded-full text-lg lg:text-2xl font-bold"><Link href="/contact">Contact us</Link></button>
+                <button className="h-16 w-16 bg-white hover:bg-secondary transition-all ease-in-out hover:scale-105 rounded-full flex justify-center items-center"><Link href="/services"><ArrowRight size={35} className="text-primary"/></Link></button>
               </div>
             </div>
           </div>
@@ -93,71 +94,12 @@ export default function Home() {
         </section>
 
 
-        <div className="h-1 bg-[#1D1E7A] w-full"/> 
+        <div className="h-1 bg-primary w-full"/> 
 
         <PowerfulStats/>
 
         <Slider/>
-        {/* <ProjectsSlider/> */}
- 
-        {/* Services Section */}
-        {/* <section id="services" className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-              <div className="w-20 h-1 bg-[#0E6FB7] mx-auto"></div>
-              <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                We provide comprehensive industrial solutions to optimize your operations and infrastructure
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Metallic Assembly",
-                  description:
-                    "Expert metallic assembly services for industrial applications with precision engineering.",
-                  icon: <Shapes size={45}/>,
-                },
-                {
-                  title: "Mechanical Solutions",
-                  description: "Comprehensive mechanical solutions for industrial machinery and equipment.",
-                  icon: <HandHelping size={45}/>,
-                },
-                {
-                  title: "Electrical Assembly",
-                  description: "Professional electrical assembly and installation for industrial facilities.",
-                  icon: <Cable size={45}/>,
-                },
-                {
-                  title: "Automation",
-                  description: "Cutting-edge automation solutions to improve efficiency and productivity.",
-                  icon: <Workflow size={45}/>,
-                },
-                {
-                  title: "Maintenance",
-                  description: "Regular maintenance services to ensure optimal performance of your equipment.",
-                  icon: <Wrench size={45}/>,
-                },
-                {
-                  title: "Engineering",
-                  description: "Custom engineering solutions for complex industrial challenges.",
-                  icon: <PencilRuler size={45}/>,
-                },
-              ].map((service, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg  hover:shadow-lg transition-shadow border-1 text-center flex flex-col items-center">
-                  <div className="mb-6 text-[#0E6FB7] border-4 rounded-2xl shadow-xl border-[#0E6FB7] p-2 top-[-40px] relative bg-white">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
-                  <Link href="#" className="mt-4 inline-flex items-center text-[#0E6FB7] hover:text-[#49779b]">
-                    Learn more
-                    <ArrowRight className="ml-2" size={16} />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
+       
 
         {/* News Section */}
         <section id="news" className="py-24 bg-white">
@@ -182,10 +124,26 @@ export default function Home() {
                   date: "04 octobre, 2025",
                   image: "/news/gtis-grain-milling-expo-casablanca.jpg",
                   category: "Events",
-                  author: "Dr. Ahmed Hassan",
+                  author: "Gtis Editorial Team",
                   authorRole: "Chief Technology Officer",
                   publishDate: "04 Octobre, 2025",
                 },
+                {
+                  id: 2,
+                  slug: "dawajine-2025-el-jadida",
+                  title: "GTIS to Participate in Dawajine 2025 – Showcasing Innovation at the 26th International Poultry Exhibition in El Jadida",
+                  subtitle: "Driving innovation and sustainability in the poultry industry",
+                  excerpt:
+                    "GTIS announces its participation in Dawajine 2025, the 26th International Poultry Exhibition, taking place from November 3 to 5, 2025, at the Mohammed VI Exhibition Center in El Jadida. The company will present its latest smart technologies and innovative solutions for the poultry sector.",
+                  content:
+                    "GTIS is proud to announce its participation in Dawajine 2025, one of Africa’s leading poultry industry exhibitions, organized by the Moroccan Interprofessional Federation of the Poultry Sector (FISA). Held from November 3 to 5, 2025, at the Mohammed VI Exhibition Center in El Jadida, this 26th edition will highlight innovation and sustainability as the main challenges facing the poultry industry.\n\nWith more than 450 exhibitors and brands from Morocco and abroad, Dawajine 2025 offers an exceptional platform for professionals to explore the latest technologies, equipment, and solutions driving the future of poultry production. GTIS will present its range of smart automation and industrial solutions designed to improve efficiency, biosecurity, and sustainable growth within the sector.\n\nAs part of its ongoing commitment to technological advancement in agribusiness, GTIS aims to strengthen collaborations and partnerships across the North and West African markets through this international event.",
+                  date: "2025-10-10",
+                  image: "/news/dawajine-2025-el-jadida.jpg",
+                  category: "Events",
+                  author: "Gtis Editorial Team",
+                  authorRole: "Communication Department",
+                  publishDate: "10 Octobre, 2025",
+                }
                
               ].map((article) => (
               <div
@@ -234,7 +192,7 @@ export default function Home() {
                   </div>
 
                   <Link href={`/news/${article.slug}`}>
-                    <Button className="w-full bg-primary hover:bg-gray-900 text-white rounded-xl group-hover:bg-red-600 transition-colors">
+                    <Button className="w-full bg-secondary/70 hover:bg-gray-900 text-primary rounded-xl group-hover:bg-primary group-hover:text-secondary transition-colors">
                       Read Trending Article
                       <TrendingUp className="ml-2 h-4 w-4" />
                     </Button>
