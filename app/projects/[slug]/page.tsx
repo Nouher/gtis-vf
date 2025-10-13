@@ -337,21 +337,23 @@ const project = getProjectBySlug(slug)
                   <div className="space-y-4 mb-6">
                     <div className="flex items-center">
                       <Phone className="w-4 h-4 mr-3 text-blue-300" />
-                      <span className="text-sm">+216 71 123 456</span>
+                      <span className="text-sm">+212 667 060 089</span>
                     </div>
                     <div className="flex items-center">
                       <Mail className="w-4 h-4 mr-3 text-blue-300" />
-                      <span className="text-sm">projects@gtis.com</span>
+                      <span className="text-sm">contact@gtis.com</span>
                     </div>
                     <div className="flex items-center">
                       <Globe className="w-4 h-4 mr-3 text-blue-300" />
                       <span className="text-sm">www.gtis.com</span>
                     </div>
                   </div>
+                  <Link href="/contact">
                   <Button className="w-full bg-white text-slate-800 hover:bg-slate-100 font-semibold transition-all duration-300 hover:scale-105">
-                    <Users className="w-4 h-4 mr-2" />
-                    Request Quote
+                    {/* <Users className="w-4 h-4 mr-2" /> */}
+                    Contact us
                   </Button>
+                  </Link>
                 </div>
               </div>
             </div>
