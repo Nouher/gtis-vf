@@ -17,7 +17,6 @@ import {
   CheckCircle,
   Phone,
   Mail,
-  Users,
   Calendar,
   ArrowRight,
 } from "lucide-react"
@@ -1115,7 +1114,7 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -1151,7 +1150,7 @@ export default function ServiceDetailPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="relative py-24 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 overflow-hidden">
