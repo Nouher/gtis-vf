@@ -13,7 +13,7 @@ export default function ContactPage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-sm"
           style={{
-            backgroundImage: "url('/bg-projects.jpeg')",
+            backgroundImage: "url('/services-slider/services-slider2.jpeg')",
           }}
         ></div>
 
