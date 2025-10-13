@@ -114,9 +114,9 @@ export function MobileNav() {
           >
             CONTACT
           </Link>
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <Button className="w-full bg-blue-600 hover:bg-blue-700">REQUEST FOR QUOTE</Button>
-          </div>
+          </div> */}
         </nav>
       </SheetContent>
     </Sheet>
