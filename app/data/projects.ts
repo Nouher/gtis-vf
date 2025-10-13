@@ -89,7 +89,7 @@ export const projects: Project[] = [
     status: "Completed",
     rating: 5,
     completionDate: "2023-11-15",
-    projectManager: "John Doe",
+    projectManager: "Mr. Othman KHALIL",
     teamSize: 25,
     features: [
       "Metallic structure assembly: full building frame and roof cladding",
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     status: "Completed",
     rating: 5,
     completionDate: "2022-09-30",
-    projectManager: "Fatima Zahra",
+    projectManager: "Mr. Othman KHALIL",
     teamSize: 30,
     features: [
       "Mechanical assembly of production units",
@@ -282,7 +282,7 @@ export const projects: Project[] = [
     status: "Completed",
     rating: 5,
     completionDate: "2021-06-20",
-    projectManager: "Ahmed Saleh",
+    projectManager: "Mr. Othman KHALIL",
     teamSize: 40,
     features: [
       "Reception and unloading of heavy equipment",
@@ -373,7 +373,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2020-12-01",
-  projectManager: "Ali Hassan",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 50,
   features: [
     "Installation of 10 flat-bottom storage silos",
@@ -466,7 +466,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2021-07-10",
-  projectManager: "Sarah Benali",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 20,
   features: [
     "Collaboration with leading suppliers ALTINBILEK & ANDRITZ",
@@ -558,7 +558,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2022-08-05",
-  projectManager: "Othman El Fassi",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 35,
   features: [
     "Site assessment and equipment specification",
@@ -649,7 +649,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2021-09-15",
-  projectManager: "Youssef El Amrani",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 25,
   features: [
     "Design and engineering of steel structure",
@@ -740,7 +740,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2021-11-30",
-  projectManager: "Fatima Zahra",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 30,
   features: [
     "Installation of grain storage silos",
@@ -832,7 +832,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2020-06-20",
-  projectManager: "Issa Traoré",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 22,
   features: [
     "Design and structural engineering",
@@ -921,7 +921,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2021-12-15",
-  projectManager: "Serge Mbemba",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 45,
   features: [
     "Construction and installation of flour milling line",
@@ -1013,7 +1013,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2022-10-01",
-  projectManager: "Serge Mbemba",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 38,
   features: [
     "Integration of new silo systems",
@@ -1104,7 +1104,7 @@ export const projects: Project[] = [
   status: "Completed",
   rating: 5,
   completionDate: "2022-12-10",
-  projectManager: "Omar Al Mansouri",
+  projectManager: "Mr. Othman KHALIL",
   teamSize: 40,
   features: [
     "Installation of 350 T/day milling line",
