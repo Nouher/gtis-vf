@@ -44,9 +44,9 @@ export default function ContactPage() {
                     <p className="text-gray-300">
                       GTIS Global Technical Services
                       <br />
-                      123 Industrial Boulevard
+                      Morocco
                       <br />
-                      Houston, TX 77001
+                      
                     </p>
                   </div>
 
