@@ -180,7 +180,13 @@ export const projects: Project[] = [
     fullDescription:
       "GTIS successfully delivered a modern agro-industrial production facility in Had Soualem. The project involved the full mechanical assembly of production units, integration of industrial machines, and complete electrical cabling with automation. A 40 T/H metallic line dedicated to flaking and ruminant feed was installed, strengthening the plant’s productivity and ensuring compliance with international standards.",
     image: "/projects/production-facility-had-soualem-morocco/main.png",
-    gallery: [],
+    gallery: [
+      "/projects/production-facility-had-soualem-morocco/1.png",
+      "/projects/production-facility-had-soualem-morocco/2.png",
+      "/projects/production-facility-had-soualem-morocco/3.png",
+      "/projects/production-facility-had-soualem-morocco/4.png",
+      "/projects/production-facility-had-soualem-morocco/5.png",
+    ],
     location: "Had Soualem, Morocco",
     client: "Confidential",
     duration: "14 months",
@@ -272,7 +278,13 @@ export const projects: Project[] = [
     fullDescription:
       "At Misurata Port, GTIS carried out the assembly, installation, and commissioning of two VIGAN pneumatic ship unloaders with a total capacity of 600 T/H. The project ensured seamless integration with port infrastructure, improving the efficiency of bulk material handling operations.",
     image: "/projects/pneumatic-unloaders-misurata-port-libya/main.png",
-    gallery: [],
+    gallery: [
+      "/projects/pneumatic-unloaders-misurata-port-libya/1.png",
+      "/projects/pneumatic-unloaders-misurata-port-libya/2.png",
+      "/projects/pneumatic-unloaders-misurata-port-libya/3.png",
+      "/projects/pneumatic-unloaders-misurata-port-libya/4.png",
+      "/projects/pneumatic-unloaders-misurata-port-libya/5.png",
+    ],
     location: "Misurata, Libya",
     client: "Port Authority of Misurata",
     duration: "10 months",
@@ -363,7 +375,13 @@ export const projects: Project[] = [
   fullDescription:
     "GTIS delivered a landmark project at Port Salif, ensuring food security in the region with the installation of ten grain storage silos. With a total capacity of 280,000 tons, the facility integrates advanced material handling systems and industrial automation for efficient wheat storage and processing.",
   image: "/projects/grain-terminal-port-salif-yemen/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/grain-terminal-port-salif-yemen/1.png",
+    "/projects/grain-terminal-port-salif-yemen/2.png",
+    "/projects/grain-terminal-port-salif-yemen/3.png",
+    "/projects/grain-terminal-port-salif-yemen/4.png",
+    "/projects/grain-terminal-port-salif-yemen/5.png",
+  ],
   location: "Port Salif, Yemen",
   client: "Government of Yemen",
   duration: "18 months",
@@ -456,7 +474,13 @@ export const projects: Project[] = [
   fullDescription:
     "GTIS implemented a state-of-the-art soybean extrusion line in partnership with ALTINBILEK and ANDRITZ. With a capacity of 6 T/H and a storage silo of 2,000 tons, this project strengthened the region’s agro-industrial infrastructure, delivering a reliable and modern solution for soybean processing.",
   image: "/projects/soybean-extrusion-had-soualem-morocco/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/soybean-extrusion-had-soualem-morocco/1.png",
+    "/projects/soybean-extrusion-had-soualem-morocco/2.png",
+    "/projects/soybean-extrusion-had-soualem-morocco/3.png",
+    "/projects/soybean-extrusion-had-soualem-morocco/4.png",
+    "/projects/soybean-extrusion-had-soualem-morocco/5.png",
+  ],
   location: "Had Soualem, Morocco",
   client: "Confidential",
   duration: "10 months",
@@ -548,7 +572,13 @@ export const projects: Project[] = [
   fullDescription:
     "GTIS delivered the installation of a 600 T/H pneumatic ship unloader, designed to handle bulk materials such as grain, cement, and coal. This system was integrated with closed pipelines to minimize spillage and dust, ensuring safe, efficient, and eco-friendly port operations.",
   image: "/projects/grain-terminal-casablanca-morocco/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/grain-terminal-casablanca-morocco/1.png",
+    "/projects/grain-terminal-casablanca-morocco/2.png",
+    "/projects/grain-terminal-casablanca-morocco/3.png",
+    "/projects/grain-terminal-casablanca-morocco/4.png",
+    "/projects/grain-terminal-casablanca-morocco/5.png",
+  ],
   location: "Casablanca, Morocco",
   client: "SOSIPO",
   duration: "11 months",
@@ -639,7 +669,13 @@ export const projects: Project[] = [
   fullDescription:
     "GTIS executed the complete construction of an industrial warehouse in Berrechid, Morocco. The project included design, fabrication, and erection of the steel structure, roofing, insulation, and cladding. This facility enhances local industrial logistics by offering a reliable and secure storage space.",
   image: "/projects/warehouse-berrechid-morocco/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/warehouse-berrechid-morocco/1.png",
+    "/projects/warehouse-berrechid-morocco/2.png",
+    "/projects/warehouse-berrechid-morocco/3.png",
+    "/projects/warehouse-berrechid-morocco/4.png",
+    "/projects/warehouse-berrechid-morocco/5.png",
+  ],
   location: "Berrechid, Morocco",
   client: "Confidential",
   duration: "8 months",
@@ -730,7 +766,13 @@ export const projects: Project[] = [
   fullDescription:
     "GTIS contributed to the expansion of Laasilat’s pasta factory by installing silos, conveyors, and steel structures for raw material storage and handling. This facility integrates modern equipment to support efficient pasta production and supply chain continuity.",
   image: "/projects/pasta-factory-laasilat-morocco/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/pasta-factory-laasilat-morocco/1.png",
+    "/projects/pasta-factory-laasilat-morocco/2.png",
+    "/projects/pasta-factory-laasilat-morocco/3.png",
+    "/projects/pasta-factory-laasilat-morocco/4.png",
+    "/projects/pasta-factory-laasilat-morocco/5.png",
+  ],
   location: "Morocco",
   client: "Laasilat",
   duration: "9 months",
@@ -822,7 +864,13 @@ export const projects: Project[] = [
   fullDescription:
     "GTIS completed a steel structure project in Burkina Faso, covering design, engineering, fabrication, and erection. The facility was built with international standards, providing durable and functional infrastructure for industrial operations.",
   image: "/projects/steel-structure-burkina-faso/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/steel-structure-burkina-faso/1.png",
+    "/projects/steel-structure-burkina-faso/2.png",
+    "/projects/steel-structure-burkina-faso/3.png",
+    "/projects/steel-structure-burkina-faso/4.png",
+    "/projects/steel-structure-burkina-faso/5.png",
+  ],
   location: "Burkina Faso",
   client: "Confidential",
   duration: "7 months",
@@ -911,7 +959,13 @@ export const projects: Project[] = [
   fullDescription:
     "GTIS successfully executed the Grand Moulin du Kouilou project in Congo, consisting of the full construction and installation of a flour milling line with a daily capacity of 350 tons. The project integrated 4 flat-bottom silos (5,000 T each) for a total of 20,000 tons of storage, alongside an automated bran granulation system. This facility strengthens regional food supply and ensures efficient wheat processing.",
   image: "/projects/grand-moulin-kouilou-congo/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/grand-moulin-kouilou-congo/1.png",
+    "/projects/grand-moulin-kouilou-congo/2.png",
+    "/projects/grand-moulin-kouilou-congo/3.png",
+    "/projects/grand-moulin-kouilou-congo/4.png",
+    "/projects/grand-moulin-kouilou-congo/5.png",
+  ],
   location: "Congo",
   client: "Grand Moulin du Kouilou",
   duration: "14 months",
@@ -1003,7 +1057,13 @@ export const projects: Project[] = [
   fullDescription:
     "Following the success of Phase I, GTIS continued the development of Grand Moulin du Kouilou in Congo. The expansion included further silo integration, automated bran handling, and commissioning services. This project consolidated the milling plant’s long-term sustainability and boosted overall efficiency.",
   image: "/projects/grand-moulin-kouilou-phase2/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/grand-moulin-kouilou-phase2/1.png",
+    "/projects/grand-moulin-kouilou-phase2/2.png",
+    "/projects/grand-moulin-kouilou-phase2/3.png",
+    "/projects/grand-moulin-kouilou-phase2/4.png",
+    "/projects/grand-moulin-kouilou-phase2/5.png",
+  ],
   location: "Congo",
   client: "Grand Moulin du Kouilou",
   duration: "10 months",
@@ -1094,7 +1154,13 @@ export const projects: Project[] = [
   fullDescription:
     "GTIS executed a turnkey flour milling project in Tripoli, Libya. The project featured the installation of a 350 T/day milling line, silo integration, and advanced automation for efficient flour production. This plant supports Libya’s food security by strengthening the supply of wheat-based products.",
   image: "/projects/milling-plant-tripoli-libya/main.png",
-  gallery: [],
+  gallery: [
+    "/projects/milling-plant-tripoli-libya/1.png",
+    "/projects/milling-plant-tripoli-libya/2.png",
+    "/projects/milling-plant-tripoli-libya/3.png",
+    "/projects/milling-plant-tripoli-libya/4.png",
+    "/projects/milling-plant-tripoli-libya/5.png",
+  ],
   location: "Tripoli, Libya",
   client: "Confidential",
   duration: "12 months",
