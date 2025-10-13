@@ -11,8 +11,8 @@ import {
   Star,
   CheckCircle,
   Eye,
-  Share2,
-  Download,
+  // Share2,
+  // Download,
   Phone,
   Mail,
   Globe,
@@ -135,7 +135,7 @@ const project = getProjectBySlug(slug)
                 <p className="text-lg text-slate-200 mb-8 leading-relaxed">{project.description}</p>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* <div className="flex flex-col sm:flex-row gap-4">
                   <Button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
                     <Download className="mr-2 h-4 w-4" />
                     Download Brochure
@@ -147,7 +147,7 @@ const project = getProjectBySlug(slug)
                     <Share2 className="mr-2 h-4 w-4" />
                     Share Project
                   </Button>
-                </div>
+                </div> */}
               </div>
 
               {/* Right Metrics */}
