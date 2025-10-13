@@ -1,6 +1,8 @@
 "use client"
 
-import { MapPin, Instagram, Linkedin, Facebook, ArrowRight, ChevronDown } from "lucide-react"
+import { MapPin, Instagram, Linkedin, Facebook, 
+  // ArrowRight,
+   ChevronDown } from "lucide-react"
 import { useState } from "react"
 
 export default function ContactPage() {
@@ -242,7 +244,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="relative py-20 px-4 bg-gradient-to-r from-slate-900 to-slate-800">
+      {/* <section className="relative py-20 px-4 bg-gradient-to-r from-slate-900 to-slate-800">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-semibold mb-6 leading-tight">
@@ -280,7 +282,7 @@ export default function ContactPage() {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }
