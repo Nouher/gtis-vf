@@ -155,7 +155,7 @@ export default function ProjectsPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/bg-projects.jpeg"
+            src="/services-slider/services-slider2.jpeg"
             alt="Projects Background"
             fill
             className="object-cover"
