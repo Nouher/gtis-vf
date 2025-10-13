@@ -172,7 +172,7 @@ export default function ContactPage() {
             <div className="mb-6">
               <MapPin className="w-8 h-8 text-slate-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-900 mb-2">GTIS Global Technical Services</h3>
-              <p className="text-gray-600">123 Industrial Boulevard, Houston, TX 77001</p>
+              <p className="text-gray-600">123 Industrial Boulevard, Morocco</p>
             </div>
             <p className="text-sm text-gray-500">Located 15 minutes from George Bush Intercontinental Airport.</p>
           </div>
