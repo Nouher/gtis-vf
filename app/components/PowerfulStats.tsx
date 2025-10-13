@@ -70,7 +70,7 @@ export default function PowerfulStats() {
     },
     {
       icon: <Award className="h-16 w-16 text-primary" />,
-      number: 8,
+      number: 15,
       suffix: "+",
       title: t("stats.years"),
       description: t("stats.years.desc"),
