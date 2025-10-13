@@ -1145,101 +1145,101 @@ export const projects: Project[] = [
 // },
 
 // 12 – Libya, Tripoli Milling Project
-{
-  id: 12,
-  slug: "pasta-factory-libya",
-  title: "Tripoli Milling Facility",
-  subtitle: "Flour Milling & Grain Storage",
-  description:
-    "GTIS delivered a turnkey flour milling facility in Tripoli, Libya, including silos and automation systems.",
-  fullDescription:
-    "GTIS executed a turnkey flour milling project in Tripoli, Libya. The project featured the installation of a 350 T/day milling line, silo integration, and advanced automation for efficient flour production. This plant supports Libya’s food security by strengthening the supply of wheat-based products.",
-  image: "/projects/milling-plant-tripoli-libya/main.png",
-  gallery: [
-    "/projects/milling-plant-tripoli-libya/1.png",
-    "/projects/milling-plant-tripoli-libya/2.png",
-    "/projects/milling-plant-tripoli-libya/3.png",
-    "/projects/milling-plant-tripoli-libya/4.png",
-    "/projects/milling-plant-tripoli-libya/5.png",
-  ],
-  location: "Tripoli, Libya",
-  client: "Confidential",
-  duration: "12 months",
-  year: "2022",
-  value: "Confidential",
-  category: "Agro-Industry",
-  status: "Completed",
-  rating: 5,
-  completionDate: "2022-12-10",
-  projectManager: "Mr. Othman KHALIL",
-  teamSize: 40,
-  features: [
-    "Installation of 350 T/day milling line",
-    "Integration of storage silos",
-    "Automation systems for flour handling",
-    "Testing and commissioning",
-  ],
-  stats: {
-    capacity: "350 T/day milling",
-    silos: 4,
-    timeline: "12 months",
-    workers: 40,
-    efficiency: "Boosted flour production capacity",
-    quality: "International food-grade compliance",
-  },
-  benefits: [
-    {
-      title: "Food Security",
-      description: "Supports Libya’s growing food demand with modern milling capacity.",
-      icon: Shield,
-    },
-    {
-      title: "Efficient Processing",
-      description: "Automation improves productivity and reduces losses.",
-      icon: Zap,
-    },
-  ],
-  process: [
-    {
-      step: 1,
-      title: "Construction",
-      description: "Civil works and structural preparation for milling plant.",
-      duration: "4 months",
-    },
-    {
-      step: 2,
-      title: "Installation",
-      description: "Assembly of milling line and silos.",
-      duration: "6 months",
-    },
-    {
-      step: 3,
-      title: "Commissioning",
-      description: "Testing, automation calibration, and operator training.",
-      duration: "2 months",
-    },
-  ],
-  testimonial: {
-    quote: "Tripoli’s milling facility is a major step toward strengthening Libya’s food sector.",
-    author: "Abdulrahman Al Fitori",
-    position: "Project Supervisor",
-    company: "Confidential",
-    avatar: "/images/testimonials/abdulrahman.jpg",
-  },
-  technicalSpecs: {
-    "Capacity": "350 T/day",
-    "Silos": "4 units",
-    "Sector": "Flour Milling & Storage",
-    "Location": "Tripoli, Libya",
-  },
-  seo: {
-    metaTitle: "Tripoli Milling Facility – Libya",
-    metaDescription:
-      "GTIS executed a turnkey flour milling project in Tripoli, Libya, including 350 T/day capacity and silo integration.",
-    keywords: ["Tripoli milling plant", "GTIS Libya", "grain storage Libya"],
-    ogImage: "/images/projects/libya-tripoli-milling-og.jpg",
-  },
-},
+// {
+//   id: 12,
+//   slug: "pasta-factory-libya",
+//   title: "Tripoli Milling Facility",
+//   subtitle: "Flour Milling & Grain Storage",
+//   description:
+//     "GTIS delivered a turnkey flour milling facility in Tripoli, Libya, including silos and automation systems.",
+//   fullDescription:
+//     "GTIS executed a turnkey flour milling project in Tripoli, Libya. The project featured the installation of a 350 T/day milling line, silo integration, and advanced automation for efficient flour production. This plant supports Libya’s food security by strengthening the supply of wheat-based products.",
+//   image: "/projects/milling-plant-tripoli-libya/main.png",
+//   gallery: [
+//     "/projects/milling-plant-tripoli-libya/1.png",
+//     "/projects/milling-plant-tripoli-libya/2.png",
+//     "/projects/milling-plant-tripoli-libya/3.png",
+//     "/projects/milling-plant-tripoli-libya/4.png",
+//     "/projects/milling-plant-tripoli-libya/5.png",
+//   ],
+//   location: "Tripoli, Libya",
+//   client: "Confidential",
+//   duration: "12 months",
+//   year: "2022",
+//   value: "Confidential",
+//   category: "Agro-Industry",
+//   status: "Completed",
+//   rating: 5,
+//   completionDate: "2022-12-10",
+//   projectManager: "Mr. Othman KHALIL",
+//   teamSize: 40,
+//   features: [
+//     "Installation of 350 T/day milling line",
+//     "Integration of storage silos",
+//     "Automation systems for flour handling",
+//     "Testing and commissioning",
+//   ],
+//   stats: {
+//     capacity: "350 T/day milling",
+//     silos: 4,
+//     timeline: "12 months",
+//     workers: 40,
+//     efficiency: "Boosted flour production capacity",
+//     quality: "International food-grade compliance",
+//   },
+//   benefits: [
+//     {
+//       title: "Food Security",
+//       description: "Supports Libya’s growing food demand with modern milling capacity.",
+//       icon: Shield,
+//     },
+//     {
+//       title: "Efficient Processing",
+//       description: "Automation improves productivity and reduces losses.",
+//       icon: Zap,
+//     },
+//   ],
+//   process: [
+//     {
+//       step: 1,
+//       title: "Construction",
+//       description: "Civil works and structural preparation for milling plant.",
+//       duration: "4 months",
+//     },
+//     {
+//       step: 2,
+//       title: "Installation",
+//       description: "Assembly of milling line and silos.",
+//       duration: "6 months",
+//     },
+//     {
+//       step: 3,
+//       title: "Commissioning",
+//       description: "Testing, automation calibration, and operator training.",
+//       duration: "2 months",
+//     },
+//   ],
+//   testimonial: {
+//     quote: "Tripoli’s milling facility is a major step toward strengthening Libya’s food sector.",
+//     author: "Abdulrahman Al Fitori",
+//     position: "Project Supervisor",
+//     company: "Confidential",
+//     avatar: "/images/testimonials/abdulrahman.jpg",
+//   },
+//   technicalSpecs: {
+//     "Capacity": "350 T/day",
+//     "Silos": "4 units",
+//     "Sector": "Flour Milling & Storage",
+//     "Location": "Tripoli, Libya",
+//   },
+//   seo: {
+//     metaTitle: "Tripoli Milling Facility – Libya",
+//     metaDescription:
+//       "GTIS executed a turnkey flour milling project in Tripoli, Libya, including 350 T/day capacity and silo integration.",
+//     keywords: ["Tripoli milling plant", "GTIS Libya", "grain storage Libya"],
+//     ogImage: "/images/projects/libya-tripoli-milling-og.jpg",
+//   },
+// },
 
 ]
 
