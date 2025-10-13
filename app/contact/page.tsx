@@ -40,7 +40,7 @@ export default function ContactPage() {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-medium mb-2 text-amber-400">Location</h3>
+                    <h3 className="text-lg font-medium mb-2 text-secondary">Location</h3>
                     <p className="text-gray-300">
                       GTIS Global Technical Services
                       <br />
@@ -52,13 +52,13 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-medium mb-1 text-amber-400">Email</h4>
+                      <h4 className="font-medium mb-1 text-secondary">Email</h4>
                       <a href="mailto:contact@gtis.com" className="text-gray-300 hover:text-white transition-colors">
                         contact@gtis.com
                       </a>
                     </div>
                     <div>
-                      <h4 className="font-medium mb-1 text-amber-400">Contact</h4>
+                      <h4 className="font-medium mb-1 text-secondary">Contact</h4>
                       <a
                         href="tel:+17135551234"
                         className="text-gray-300 hover:text-white cursor-pointer transition-colors"
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <h4 className="font-medium mb-1 text-amber-400">Hours</h4>
+                    <h4 className="font-medium mb-1 text-secondary">Hours</h4>
                     <p className="text-gray-300">Monday–Friday | 08:00 – 18:00</p>
                   </div>
 
@@ -94,7 +94,7 @@ export default function ContactPage() {
                       <label className="block text-sm font-medium text-gray-100 mb-2">First Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-amber-400 text-white placeholder-gray-300"
+                        className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-white placeholder-gray-300"
                         required
                       />
                     </div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                       <label className="block text-sm font-medium text-gray-100 mb-2">Last Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-amber-400 text-white placeholder-gray-300"
+                        className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-white placeholder-gray-300"
                         required
                       />
                     </div>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                     <label className="block text-sm font-medium text-gray-100 mb-2">Country</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-amber-400 text-white placeholder-gray-300"
+                      className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-white placeholder-gray-300"
                     />
                   </div>
 
@@ -120,7 +120,7 @@ export default function ContactPage() {
                     <label className="block text-sm font-medium text-gray-100 mb-2">Phone Number</label>
                     <input
                       type="tel"
-                      className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-amber-400 text-white placeholder-gray-300"
+                      className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-white placeholder-gray-300"
                     />
                   </div>
 
@@ -128,7 +128,7 @@ export default function ContactPage() {
                     <label className="block text-sm font-medium text-gray-100 mb-2">Email Address</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-amber-400 text-white placeholder-gray-300"
+                      className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-white placeholder-gray-300"
                       required
                     />
                   </div>
@@ -137,7 +137,7 @@ export default function ContactPage() {
                     <label className="block text-sm font-medium text-gray-100 mb-2">Message</label>
                     <textarea
                       rows={4}
-                      className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-amber-400 text-white placeholder-gray-300"
+                      className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-white placeholder-gray-300"
                       required
                     />
                   </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                     <input
                       type="checkbox"
                       id="opt-in"
-                      className="mt-1 rounded border-white/30 bg-black/20 text-amber-400 focus:ring-amber-400"
+                      className="mt-1 rounded border-white/30 bg-black/20 text-secondary focus:ring-secondary"
                     />
                     <label htmlFor="opt-in" className="text-sm text-gray-100">
                       {`I'd like to receive exclusive offers and updates`}
@@ -155,7 +155,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-amber-400 text-black py-3 px-6 rounded-lg hover:bg-amber-300 transition-colors font-medium"
+                    className="w-full bg-secondary text-black py-3 px-6 rounded-lg hover:bg-amber-300 transition-colors font-medium"
                   >
                     Submit
                   </button>
