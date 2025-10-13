@@ -23,7 +23,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-black/70"></div>
 
         {/* Hero Content */}
-        <div className="relative z-10 min-h-screen flex items-start pt-48 pb-31">
+        <div className="relative z-10 h-screen flex items-start pt-44 pb-31">
           <div className="max-w-7xl mx-auto px-4 w-full">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left Panel - Contact Info */}
@@ -44,7 +44,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-medium mb-2 text-secondary">Location</h3>
                     <p className="text-gray-300">
-                      GTIS Global Technical Services
+                      GTIS Global Technical Services,
                       <br />
                       Morocco
                       <br />
@@ -85,12 +85,12 @@ export default function ContactPage() {
 
               {/* Right Panel - Contact Form */}
               <div className="bg-black/20 backdrop-blur-md border border-white/30 rounded-2xl p-8 shadow-2xl">
-                <div className="mb-8">
-                  <h2 className="text-2xl font-semibold text-white mb-3">Tell Us What You Need</h2>
-                  <p className="text-gray-100">Our team is ready to assist you with every detail, big or small.</p>
+                <div className="mb-2">
+                  <h2 className="text-2xl font-semibold text-white ">Tell Us What You Need</h2>
+                  <p className="text-gray-100 text-sm">Our team is ready to assist you with every detail, big or small.</p>
                 </div>
 
-                <form className="space-y-6">
+                <form className="space-y-1">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-100 mb-2">First Name</label>
@@ -138,7 +138,7 @@ export default function ContactPage() {
                   <div>
                     <label className="block text-sm font-medium text-gray-100 mb-2">Message</label>
                     <textarea
-                      rows={4}
+                      rows={2}
                       className="w-full px-4 py-3 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-white placeholder-gray-300"
                       required
                     />
