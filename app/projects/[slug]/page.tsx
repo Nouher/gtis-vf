@@ -7,7 +7,7 @@ import {
   ArrowRight,
   MapPin,
   Calendar,
-  Users,
+  // Users,
   Star,
   CheckCircle,
   Eye,
