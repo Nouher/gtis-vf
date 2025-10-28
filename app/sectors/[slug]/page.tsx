@@ -52,7 +52,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
                     className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-800/80 to-gray-700/70" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-700/90 via-secondary/80 to-gray-900/70" />
                 </div>
         
                 {/* Content */}
@@ -72,7 +72,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
               <p className="text-lg leading-relaxed max-w-lg text-pretty text-gray-300">{sector.whatWeDo}</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/services">
-                    <Button size="lg" className="group">
+                    <Button size="lg" className="group text-white">
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -115,7 +115,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
             {sector.addedValue.map((value, index) => (
               <div key={index} className="text-center space-y-4">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto">
-                  <CheckCircle className="w-6 h-6 text-primary-foreground" />
+                  <CheckCircle className="w-6 h-6 text-secondary" />
                 </div>
                 <p className="text-foreground font-medium leading-relaxed">{value}</p>
               </div>
@@ -156,16 +156,16 @@ export default async function SectorPage({ params }: SectorPageProps) {
             <p className="text-lg text-muted-foreground leading-relaxed mb-12 text-pretty">{sector.whyChoose}</p>
             <div className="flex flex-wrap justify-center gap-8">
               <div className="text-center border-4 p-4 border-primary rounded-2xl w-40 bg-primary">
-                <div className="text-4xl font-bold text-white mb-2">15+</div>
-                <p className="text-sm text-white">Years Experience</p>
+                <div className="text-4xl font-bold text-secondary mb-2">15+</div>
+                <p className="text-sm text-secondary">Years Experience</p>
               </div>
               <div className="text-center border-4 p-4 border-primary rounded-2xl w-40 bg-primary">
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
-                <p className="text-sm text-white">Projects Completed</p>
+                <div className="text-4xl font-bold text-secondary mb-2">50+</div>
+                <p className="text-sm text-secondary">Projects Completed</p>
               </div>
               <div className="text-center border-4 p-4 border-primary rounded-2xl w-40 bg-primary">
-                <div className="text-4xl font-bold text-white mb-2">10</div>
-                <p className="text-sm text-white">Countries Served</p>
+                <div className="text-4xl font-bold text-secondary mb-2">10</div>
+                <p className="text-sm text-secondary">Countries Served</p>
               </div>
             </div>
           </div>
@@ -188,7 +188,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="tel:+212667060089">
-                <Button size="lg" className="group">
+                <Button size="lg" className="group text-secondary">
                     Request Consultation
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
