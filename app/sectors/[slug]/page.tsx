@@ -52,7 +52,7 @@ export default async function SectorPage({ params }: SectorPageProps) {
                     className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-gray-700/90 via-secondary/80 to-gray-900/70" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-700/90 via-secondary/70 to-gray-900/70" />
                 </div>
         
                 {/* Content */}
