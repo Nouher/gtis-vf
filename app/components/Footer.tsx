@@ -127,7 +127,7 @@ export default function Footer() {
               <ul className="space-y-2 text-gray-400">
                 <li className="flex items-start">
                   <MapPin size={16} className="mr-2" />
-                  <span>123 Industrial Zone, Casablanca, Morocco</span>
+                  <span>Morocco</span>
                 </li>
                 <li >
                   <Link href="tel:+212667060089" className="flex items-center cursor-pointer hover:text-white">
