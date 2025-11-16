@@ -56,21 +56,21 @@ export default function PowerfulStats() {
   const stats = [
     {
       icon: <Building2 className="h-16 w-16 text-primary" />,
-      number: 50,
+      number: 15,
       suffix: "+",
       title: t("stats.projects"),
       description: t("stats.projects.desc"),
     },
     {
       icon: <Globe className="h-16 w-16 text-primary" />,
-      number: 10,
+      number: 7,
       suffix: "+",
       title: t("stats.countries"),
       description: t("stats.countries.desc"),
     },
     {
       icon: <Award className="h-16 w-16 text-primary" />,
-      number: 15,
+      number: 8,
       suffix: "+",
       title: t("stats.years"),
       description: t("stats.years.desc"),
